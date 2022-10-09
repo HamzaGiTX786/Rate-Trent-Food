@@ -26,5 +26,6 @@ include 'includes/library.php';
 
         <button type="submit">Search</button>
     </form>
+
 </body>
 </html>

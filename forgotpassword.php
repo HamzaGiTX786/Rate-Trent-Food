@@ -3,9 +3,9 @@ include 'includes/library.php';
 
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer;
-use PHPMailer\SMTP;
-use PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 $errors = array(); //declare empty array to add errors too
 $email = $_POST['email'] ?? null;

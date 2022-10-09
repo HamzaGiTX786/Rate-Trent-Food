@@ -26,8 +26,9 @@ include 'includes/library.php';
 
         <button type="submit">Search</button>
     </form>
+    
     <?php
         include 'includes/footer.php';
-        ?>
+    ?>
 </body>
 </html>

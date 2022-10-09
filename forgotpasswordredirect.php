@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Rate Trent Fodd&colon; Forgot Password</title>
+        <title>Rate Trent Food&colon; Forgot Password</title>
         <link rel="stylesheet" href="styles/master.css">
     </head>
     <body>

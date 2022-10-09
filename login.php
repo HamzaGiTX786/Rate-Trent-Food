@@ -1,4 +1,5 @@
 <?php  
+include 'includes/library.php';
 
 $user = $_POST['username'] ?? null;
 $password = $_POST['password'] ?? null;
@@ -8,8 +9,6 @@ $errors = array();
 
 if (isset($_POST['submit'])) 
 {
-
-    include 'includes/library.php';
         
     $query = "SELECT * FROM Users WHERE username =?"; //select the row of the table with the given username
     $stmt = mysqli_stmt_init($conn);

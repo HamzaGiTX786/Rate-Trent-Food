@@ -83,7 +83,7 @@ if (isset($_POST['submit']))
                     <input type="password" id="password" name="password" autocomplete="new-password"  placeholder="Enter your password here" size="40"/>
                 </div>
                 <div>
-                    <a href="forgot_password.php">Forgot Password?</a>
+                    <a href="forgotpassword.php">Forgot Password?</a>
                 </div>
                 <div>
                     <span class="error <?=!isset($errors['login']) ? 'hidden' : "";?>"> Your username or password was invalid</span>

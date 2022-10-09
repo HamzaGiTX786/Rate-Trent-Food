@@ -23,7 +23,7 @@ if (isset($_POST['submit']))
     $row = mysqli_fetch_assoc($result);
     }
         
-    if($row === false) //if row is false then no row with that username exists and user is invalid
+    if($row == false) //if row is false then no row with that username exists and user is invalid
     { 
         $errors['login'] = true;
     }

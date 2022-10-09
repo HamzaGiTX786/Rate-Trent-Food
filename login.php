@@ -29,8 +29,8 @@ if (isset($_POST['submit']))
     }
     else //if the row was valid
     {
-        //if(password_verify($password, $row['password'])) //verify that the password is correct
-        if($password == $row['password'])
+        if(password_verify($password, $row['password'])) //verify that the password is correct
+        //if($password == $row['password'])
         {
             session_start(); //start the session
             $_SESSION['user'] = $row['username']; //load session credentials

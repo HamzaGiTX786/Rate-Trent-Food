@@ -74,6 +74,10 @@ if (isset($_POST['submit']))
         <link rel="stylesheet" href="styles/master.css">
     </head>
     <body>
+    <?php
+        include 'includes/header.php';
+        include 'includes/nav.php';
+        ?>
        <main>
        <h2>Reset Password</h2>
             <p>Please enter your new password.</p>

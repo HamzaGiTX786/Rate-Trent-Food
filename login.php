@@ -65,9 +65,13 @@ if (isset($_POST['submit']))
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Rate Trent Food&colon; Login </title>
-        <link rel="stylesheet" href="styles/website_master.css" />
+        <link rel="stylesheet" href="styles/master.css" />
     </head>
     <body>
+    <?php
+        include 'includes/header.php';
+        include 'includes/nav.php';
+    ?>
         <main>
             <h2>LOGIN</h2>
              <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF']?>" >

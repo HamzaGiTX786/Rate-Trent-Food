@@ -1,0 +1,15 @@
+@import url("reset.css"); /*Adding the reset stylesheet*/
+
+.hidden{
+    display: none;
+}
+
+/*class for errors*/
+.hidden{
+    display:none; /*If the error doesnt exist nothing to print */
+}
+
+/* Print the errors in red*/
+.error{
+    color: red;
+}

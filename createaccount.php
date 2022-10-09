@@ -100,14 +100,14 @@ if (isset($_POST['submit']))
 
         if(count($errors)===0) //check if there are still no errors
         {
-            $query = "INSERT INTO Users values (NULL, ?, ?, ?, ?, ?, ?, ?, ?)"
+            $query = "INSERT INTO Users values (NULL, ?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt,$query))
         {
             echo "SQL prepare failed";
         }
         else{
-            mysqli_stmt_bind_param($stmt,"sssssssss",$username, password_hash($password, PASSWORD_BCRYPT) , $email, $fname, $lname,$major,$date_start,$date_end);
+            mysqli_stmt_bind_param($stmt,"ssssssss",$username, password_hash($password, PASSWORD_BCRYPT) , $email, $fname, $lname,$major,$date_start,$date_end);
             mysqli_stmt_execute($stmt);
 
             header("Location: login.php");
@@ -127,6 +127,10 @@ if (isset($_POST['submit']))
         <link rel="stylesheet" href="styles/master.css" />
     </head>
     <body>
+    <?php
+        include 'includes/header.php';
+        include 'includes/nav.php';
+    ?>
         <main>
             <h2> Create Account </h2>
                 <form id="create" name="create" method="post" novalidate>

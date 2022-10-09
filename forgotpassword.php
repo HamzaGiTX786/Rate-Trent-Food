@@ -67,7 +67,7 @@ if (isset($_POST['submit']))
                 //Recipients
                 $mail->setFrom('ratetrentfood@gmail.com', 'RateTrentFood');
                 $mail->addAddress($email);     //Add a recipient
-                $mail->addReplyTo('noreply@ratetrentfood.com', 'No reply');
+                $mail->addReplyTo('no-reply@ratetrentfood.com', 'No reply');
 
                 //Content
                 $mail->isHTML(true);                                  //Set email format to HTML

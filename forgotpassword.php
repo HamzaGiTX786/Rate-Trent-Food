@@ -43,8 +43,8 @@ if (isset($_POST['submit']))
             echo "SQL prepare failed";
             }
             else{
-            mysqli_stmt_bind_param($stmt,"ss",$code,$email);
-            mysqli_stmt_execute($stmt);
+            mysqli_stmt_bind_param($statement,"ss",$code,$email);
+            mysqli_stmt_execute($statement);
             
 
             require 'PHPMailer/src/Exception.php';

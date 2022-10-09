@@ -57,27 +57,27 @@ if (isset($_POST['submit']))
             try {
                 //Server settings
                 $mail->isSMTP();                                            //Send using SMTP
-                $mail->Host       = 'smtp.titan.email';                     //Set the SMTP server to send through
+                $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                $mail->Username   = 'support@stars4uni.com';                     //SMTP username
-                $mail->Password   = 'Unistar1234!';                               //SMTP password
+                $mail->Username   = 'ratetrentfood@gmail.com';                     //SMTP username
+                $mail->Password   = 'TrentFood2022';                               //SMTP password
                 $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
                 $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                 //Recipients
-                $mail->setFrom('support@stars4uni.com', 'Stars4Uni');
+                $mail->setFrom('ratetrentfood@gmail.com', 'RateTrentFood');
                 $mail->addAddress($email);     //Add a recipient
-                $mail->addReplyTo('support@stars4uni.com', 'No reply');
+                $mail->addReplyTo('noreply@ratetrentfood.com', 'No reply');
 
                 //Content
                 $mail->isHTML(true);                                  //Set email format to HTML
-                $mail->Subject = 'Password Reset Link - Stars4Uni';
-                $mail->Body    = "Click <a href='https://www.stars4uni.com/forgotpassword_reset.php?code=$code'>here</a> to reset your password";
+                $mail->Subject = 'Password Reset Link - Rate Trent Food';
+                $mail->Body    = "Click <a href='https://https://loki.trentu.ca/~hamzasalimattarwala/3850/forgotpasswordreset.php?code=$code'>here</a> to reset your password";
                 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
                 $mail->send();
 
-                header("Location: forgotpassword_redirect"); //redirect to the homepage
+                header("Location: forgotpasswordredirect.php"); //redirect to the homepage
                 } 
                 catch (Exception $e) {
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
@@ -98,7 +98,7 @@ if (isset($_POST['submit']))
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Stars4Uni&colon; Forgot Password</title>
+        <title>Rate Trent Food&colon; Forgot Password</title>
         <link rel="stylesheet" href="styles/master.css">
     </head>
     <body>

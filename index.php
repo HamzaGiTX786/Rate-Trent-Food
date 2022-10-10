@@ -49,7 +49,7 @@ if(isset($_POST['submit']))
  ?>
        
     <p>Welcome to Rate Trent Food. This a website where you can give a rating to a dish served in any of Trent University's Cafes from 1-5</p>
-    <form method="post">
+    <form name="search" id="search" method="post" novalidate>
     <div>
         <label for="search">Search</label>
         <input type="text" name="search" id="search" placeholder="Search" />

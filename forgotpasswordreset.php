@@ -54,7 +54,7 @@ if (isset($_POST['submit']))
             mysqli_stmt_bind_param($stm,"s",$code);
             mysqli_stmt_execute($stm);
 
-            header("Location: forgotpasswordsuccess.php");
+            header("Location: forgotpasswordsuccess");
                 }
             }
         }

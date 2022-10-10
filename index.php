@@ -1,5 +1,33 @@
 <?php
 include 'includes/library.php';
+ 
+$search = $_POST['search'] ?? null;
+
+$errors = array(); //declare empty array to add errors too
+
+if(isset($_POST['submit']))
+{
+    if (!isset($search) || strlen($search) === 0) 
+    {
+        $errors['search'] = true;
+    }
+
+    if(count($errors) === 0)
+    {
+        $query = "SELECT FROM items WHERE itemname LIKE '%?%'";
+        $stmt = mysqli_stmt_init($conn);
+        if(!mysqli_stmt_prepare($stmt,$query))
+        {
+            echo "SQL prepare failed";
+        }
+        else{
+            mysqli_stmt_bind_param($stmt,"s",$search);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+            var_dump($result);
+    }
+}
+
 ?>
 
 
@@ -21,9 +49,11 @@ include 'includes/library.php';
        
     <p>Welcome to Rate Trent Food. This a website where you can give a rating to a dish served in any of Trent University's Cafes from 1-5</p>
     <form method="post">
+    <div>
         <label for="search">Search</label>
-        <input type="text" name="search" placeholder="search here">
-
+        <input type="text" name="search" id="search" placeholder="Search" value=""/>
+        <span class="error <?=!isset($errors['search']) ? 'hidden' : "";?>">Please enter item to be searched!</span>
+    </div>
         <button type="submit">Search</button>
     </form>
     

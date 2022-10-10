@@ -110,7 +110,7 @@ if (isset($_POST['submit']))
             mysqli_stmt_bind_param($stmt,"ssssssss",$username, password_hash($password, PASSWORD_BCRYPT) , $email, $fname, $lname,$major,$date_start,$date_end);
             mysqli_stmt_execute($stmt);
 
-            header("Location: login.php");
+            header("Location: login");
             exit();
         }
          }

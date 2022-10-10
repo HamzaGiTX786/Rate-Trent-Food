@@ -11,7 +11,6 @@ $password = $_POST['password'] ?? null;
 $passwordre = $_POST['passwordre'] ?? null;
 $agree = $_POST['agree'] ?? null;
 $username = $_POST['username'] ?? null;
-$university = $_POST['university'] ?? null;
 $major = $_POST['major'] ?? null;
 $date_start =$_POST['date_start']??null;
 $date_end = $_POST['date_end']?? null; 
@@ -37,16 +36,19 @@ if (isset($_POST['submit']))
         $errors['email'] = true;
     }
 
+    //validate user has entered a major
     if (!isset($major) || strlen($major) === 0)
     {
         $errors['major'] = true;
     }
 
+    //validate user has entered a start date to school
     if (!isset($date_start) || strlen($date_start) === 0)
     {
         $errors['date_start'] = true;
     }
 
+    //validate user has entered a end date to school
     if (!isset($date_end) || strlen($date_end) === 0)
     {
         $errors['date_end'] = true;
@@ -62,7 +64,7 @@ if (isset($_POST['submit']))
         $errors['username'] = true;
     }
     
-    if(!isset($password) || strlen($password) < 8) //make sure a password was given
+    if(!isset($password) || strlen($password) < 8) //make sure a password was given and is 8 char long
     {
         $errors['password'] = true;
     }
@@ -134,16 +136,22 @@ if (isset($_POST['submit']))
         <main>
             <h2> Create Account </h2>
                 <form id="create" name="create" method="post" novalidate>
+
+                    <!-- First name input -->
                     <div>
                         <label for="fname">First Name</label>
                         <input type="text" name="fname" id="fname" placeholder="Enter your first name here" value="" required />
                          <span class="error <?=!isset($errors['fname']) ? 'hidden' : "";?>">Please enter your First name</span>
                     </div>
+
+                      <!-- last name input -->
                     <div>
                         <label for="lname">Last Name</label>
                         <input type="text" name="lname" id="lname" placeholder="Enter your last name here" value="" required />
                         <span class="error <?=!isset($errors['lname']) ? 'hidden' : "";?>">Please enter your Last name</span>
                     </div>
+
+                      <!-- Email input -->
                     <div>
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="someone@something.com" value="" required />
@@ -151,30 +159,35 @@ if (isset($_POST['submit']))
                         <span class="error <?=!isset($errors['email']) ? 'hidden' : "";?>">Email already in use</span>
                     </div>
 
+                    <!-- Major input -->
                     <div>
                         <label for="major">Major</label>
                         <input type="text" name="major" id="major" placeholder="Enter your major here" value="" required />
                         <span class="error <?=!isset($errors['major']) ? 'hidden' : "";?>">Please enter a major</span>
                     </div>
 
+                    <!-- Date of Starting school input -->
                     <div>
                         <label for="start_date">Date of Starting School</label>
                         <input type="date" name="date_start" id="date_start" placeholder="Enter your date of beginning university/school here" value="" required />
                         <span class="error <?=!isset($errors['date_start']) ? 'hidden' : "";?>">Please enter a date of starting school</span>
                     </div>
 
+                     <!-- Date of Graduation input -->
                     <div> 
                         <label for="date_graduation">Date of Graduation/Expected Date of Graduation</label>
                         <input type="date" name="date_end" id="date_end" placeholder="Enter your date of  ending university/school here" value="" required />
                         <span class="error <?=!isset($errors['date_end']) ? 'hidden' : "";?>">Please enter a date of graduation or expected for graduation</span>
                     </div>
 
+                     <!-- Username input -->
                     <div>
                         <label for="username">Username</label>
                         <input type="text" name="username" id="username" placeholder="Enter your username here" value="" required />
                         <span class="error <?=!isset($errors['username']) ? 'hidden' : "";?>">Enter your username here</span>
                         <span class="error <?=!isset($errors['uniqueEmail']) ? 'hidden' : "";?>">Username already taken</span>
                     </div>
+
                     <!-- Password input -->
                     <div>
                         <label for="password">Password</label>

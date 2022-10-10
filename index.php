@@ -57,19 +57,20 @@ if(isset($_POST['submit']))
         <span class="error <?=!isset($errors['search']) ? 'hidden' : "";?>">Please enter item to be searched!</span>
     </div>
 
+    <div id="buttons">
+    <button type="submit" name="submit">Search</button>
+    </div>
+
+    </form>
+
     <div id="searchresult" class = "<?=!isset($food) ? 'hidden':"";?>">
+    <p>Search Result: </p>
     <?php foreach($food as $fooditem):?>
         <ul>
             <li>Name: <?= $fooditem?></li>
         </ul>
     <?php endforeach; ?>
     </div>
-
-    <div id="buttons">
-    <button type="submit" name="submit">Search</button>
-    </div>
-
-    </form>
     
     <?php
         include 'includes/footer.php';

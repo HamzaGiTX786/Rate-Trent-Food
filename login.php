@@ -47,7 +47,7 @@ if (isset($_POST['submit']))
                 }
             }
 
-            header("Location: index.php"); //redirect to the homepage
+            header("Location: index"); //redirect to the homepage
         }
         else
         {

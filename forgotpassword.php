@@ -78,7 +78,7 @@ if (isset($_POST['submit']))
 
                 $mail->send();
 
-                header("Location: forgotpasswordredirect.php"); //redirect to the homepage
+                header("Location: forgotpasswordredirect"); //redirect to the homepage
                 } 
                 catch (Exception $e) {
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

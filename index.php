@@ -77,12 +77,6 @@ if(isset($_POST['submit']))
         </ul>
     <?php endforeach; ?>
     </div>
-
-    <?php if(!isset($food)){?>
-        <div>
-        <p>Search Result: No results found </p>
-        </div>
-    <?php } ?>
     
     <?php
         include 'includes/footer.php';

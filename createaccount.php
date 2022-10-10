@@ -62,7 +62,7 @@ if (isset($_POST['submit']))
         $errors['username'] = true;
     }
     
-    if(!isset($password) || strlen($password) === 0) //make sure a password was given
+    if(!isset($password) || strlen($password) < 8) //make sure a password was given
     {
         $errors['password'] = true;
     }
@@ -179,7 +179,7 @@ if (isset($_POST['submit']))
                     <div>
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" placeholder="Enter your password here" value="" required />
-                        <span class="error <?=!isset($errors['password']) ? 'hidden' : "";?>">Please enter a password</span>
+                        <span class="error <?=!isset($errors['password']) ? 'hidden' : "";?>">Please enter a password that is more than 8 charaters long</span>
                     </div>
  
                     <!-- Re-entering Password -->

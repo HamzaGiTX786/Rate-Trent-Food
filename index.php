@@ -55,7 +55,11 @@ if(isset($_POST['submit']))
         <input type="text" name="search" id="search" placeholder="Search" />
         <span class="error <?=!isset($errors['search']) ? 'hidden' : "";?>">Please enter item to be searched!</span>
     </div>
-        <button type="submit">Search</button>
+
+    <div id="buttons">
+    <button type="submit" name="submit">Search</button>
+    </div>
+
     </form>
     
     <?php

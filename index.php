@@ -14,17 +14,18 @@ if(isset($_POST['submit']))
 
     if(count($errors) === 0)
     {
-        $query = "SELECT itemname FROM fooditems WHERE itemname LIKE '%?%' ";
+        $searchquery = "%$search%";
+        $query = "SELECT itemname FROM fooditems WHERE itemname LIKE ? ";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt,$query))
         {
             echo "SQL prepare failed";
         }
         else{
-            mysqli_stmt_bind_param($stmt,"s",$search);
+            mysqli_stmt_bind_param($stmt,"s",$searchquery);
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
-            var_dump($result);
+            $food = mysqli_fetch_assoc($result);
     }
 }
 }
@@ -54,6 +55,14 @@ if(isset($_POST['submit']))
         <label for="search">Search</label>
         <input type="text" name="search" id="search" placeholder="Search" />
         <span class="error <?=!isset($errors['search']) ? 'hidden' : "";?>">Please enter item to be searched!</span>
+    </div>
+
+    <div id="searchresult" class = "<?=!isset($food) ? 'hidden':"";?>">
+    <?php foreach($food as $fooditem):?>
+        <ul>
+            <li>Name: <?= $fooditem?></li>
+        </ul>
+    <?php endforeach; ?>
     </div>
 
     <div id="buttons">

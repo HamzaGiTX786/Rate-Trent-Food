@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
 
     if(count($errors) === 0)
     {
-        $query = "SELECT FROM items WHERE itemname LIKE %?% ";
+        $query = "SELECT itemname FROM items WHERE itemname LIKE %?% ";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt,$query))
         {

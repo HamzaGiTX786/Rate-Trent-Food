@@ -52,7 +52,7 @@ if(isset($_POST['submit']))
     <form method="post">
     <div>
         <label for="search">Search</label>
-        <input type="text" name="search" id="search" placeholder="Search" value=""/>
+        <input type="text" name="search" id="search" placeholder="Search" />
         <span class="error <?=!isset($errors['search']) ? 'hidden' : "";?>">Please enter item to be searched!</span>
     </div>
         <button type="submit">Search</button>

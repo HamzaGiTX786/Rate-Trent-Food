@@ -13,6 +13,9 @@
 }
 
 body{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
     background-image: linear-gradient(to left top, #9fb58a, #778768, #525c48, #2f342a, #0e0f0d);
     font-family: 'Comfortaa', cursive;
     font-weight: 500;
@@ -28,6 +31,14 @@ h1{
   padding: 0.5em;
 }
 
+h2{
+    text-align: left;
+    font-weight: 700;
+    font-size: xx-large;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
 header a, header a:visited, header a:hover{
     color: #fff;
     text-decoration: none;
@@ -39,25 +50,114 @@ nav ul{
     justify-content: space-evenly;
 }
 
-nav a{
+nav ul a, nav ul a:visited {
     color: #fff;
     text-decoration: none;
     font-family: 'Comfortaa', cursive;
-    font-weight: 400;
-    padding: 2em;
+    text-shadow: 0.1em 0px 1px #333;
+    padding: 1em;
 }
 
-nav a:hover{
-    color: crimson;
+nav ul a:hover, nav ul a:visited:hover {
+    background: var(--light);
+    border-radius: 0.3em;
+    text-shadow: 0px 0px 0px;
+    color: #fff;
 }
 
-main{
-    background-color: #fff;
-    border-radius: 0.5em;
-    max-width: 20em;
+main {
+    background: #fff;
+    width: 75%;
+    margin: 7em auto;
+    padding: 4em;
+    border-radius: 2em;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+    min-height: 75%;
+}
+
+footer {
+    text-align: center;
+    font-size: medium;
+    margin: 0.5em;
+    padding: 1em;
+    color: #fff;
+    text-shadow: 0.1em 0px 1px #333;
+}
+
+footer ul{
+    margin:0.5em;
+    padding: 0.5em;
+}
+
+footer ul li{
+    padding: 0.5em;
+}
+footer ul a, footer ul a:visited{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    text-shadow: 0.1em 0px 1px #333;
+    padding: 1em;
+}
+
+footer ul a:hover, footer ul a:visited:hover {
+    background: var(--light);
+    border-radius: 0.3em;
+    text-shadow: 0px 0px 0px;
+    color: #fff;
+}
+
+form {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-self: center;
+    font-size: larger;
+    font-weight: 500;
+    align-items: stretch;
 }
 
+form div {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+    align-items: stretch;
+    position: relative;
+}
+
+form div label{
+    padding: 0.5em;
+}
+
+form div label[for="remember"],form div label[for="agree"]{
+    padding-left: 2em;
+    margin-top: 0%;
+}
+
+#searchresult ul{
+    padding-left:2em;
+}
+
+input {
+    position:relative;
+    border: none;
+    border-bottom: 0.2em solid #ddd;
+    background-color: whitesmoke;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+button[type="submit"] {
+    background-image: linear-gradient(to left top, #9fb58a, #778768, #525c48, #2f342a, #0e0f0d);
+    padding: 1em;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+input[type="checkbox"]{
+    position:absolute;
+
+}
+
+main p{
+    padding-left: 1em;
+}

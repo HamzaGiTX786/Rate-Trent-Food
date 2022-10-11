@@ -1,6 +1,6 @@
 
     <footer>
-        <p>Links to other services offered by Trent University</p>
+        <p>Links to other services offered by Trent University:</p>
         <ul><li><a href="https://www.trentu.ca">Trent University</a></li>
         <li><a href="https://www.trentu.ca/housing">Trent University - Housing</a></li>
         <li><a href="https://www.trentu.ca/mytrent">MyTrent Login</a></li></ul>

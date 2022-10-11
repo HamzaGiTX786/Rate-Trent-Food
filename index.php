@@ -54,7 +54,7 @@ if(isset($_POST['submit']))
 
         <!-- Search bar -->
     <div>
-        <label for="search">Search</label>
+        <label for="search">Search for a dish:</label>
         <input type="text" name="search" id="search" placeholder="Search" />
         <span class="error <?=!isset($errors['search']) ? 'hidden' : "";?>">Please enter item to be searched!</span>
     </div>

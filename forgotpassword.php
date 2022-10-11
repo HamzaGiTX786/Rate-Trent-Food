@@ -58,7 +58,7 @@ if (isset($_POST['submit']))
               'To' => $to,
               'Subject' => $subject);
             $smtp = Mail::factory('smtp',
-              array ('host' => $host),'port'=> 587);
+              array ('host' => $host,'port'=> 587));
               
             $mail = $smtp->send($to, $headers, $body);
             if (PEAR::isError($mail)) {

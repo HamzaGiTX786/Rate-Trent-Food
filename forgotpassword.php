@@ -47,48 +47,25 @@ if (isset($_POST['submit']))
             mysqli_stmt_execute($statement);
             
 
-            require 'PHPMailer/src/Exception.php';
-            require 'PHPMailer/src/PHPMailer.php';
-            require 'PHPMailer/src/SMTP.php';
+            require_once "Mail.php";  //this includes the pear SMTP mail library
 
-            //Create an instance; passing `true` enables exceptions
-            $mail = new PHPMailer();
-
-            try {
-                //Server settings
-                $mail->isSMTP();                                            //Send using SMTP
-                $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-                $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                $mail->Username   = 'ratetrentfood@gmail.com';                     //SMTP username
-                $mail->Password   = 'TrentFood2022';                               //SMTP password
-                $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
-                //Recipients
-                $mail->setFrom('ratetrentfood@gmail.com', 'RateTrentFood');
-                $mail->addAddress($email);     //Add a recipient
-                $mail->addReplyTo('no-reply@ratetrentfood.com', 'No reply');
-
-                //Content
-                $mail->isHTML(true);                                  //Set email format to HTML
-                $mail->Subject = 'Password Reset Link - Rate Trent Food';
-                $mail->Body    = "Click <a href='https://https://loki.trentu.ca/~hamzasalimattarwala/3850/forgotpasswordreset.php?code=$code'>here</a> to reset your password";
-                $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-                $mail->send();
-
-                header("Location: forgotpasswordredirect"); //redirect to the homepage
-                } 
-                catch (Exception $e) {
-                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-                die();
-                }
-        }
-        }
-        else{
-             $errors['email'] = true;
-        }
+            $from = "ratetrentfood@gmail.com";
+            $to = $email;  //put user's email here
+            $subject = "This is the subject";
+            $body = "Click <a href='https://https://loki.trentu.ca/~hamzasalimattarwala/3850/forgotpasswordreset.php?code=$code'>here</a> to reset your password";
+            $host = "smtp.gmail.com";
+            $headers = array ('From' => $from,
+              'To' => $to,
+              'Subject' => $subject);
+            $smtp = Mail::factory('smtp',
+              array ('host' => $host));
+              
+            $mail = $smtp->send($to, $headers, $body);
+            if (PEAR::isError($mail)) {
+              echo("<p>" . $mail->getMessage() . "</p>");
+             } else {
+              header("Location: forgotpasswordredirect");
+             }
     }
     }
 }

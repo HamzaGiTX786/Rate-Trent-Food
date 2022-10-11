@@ -14,6 +14,9 @@
 
 body{
     background-image: linear-gradient(to left top, #9fb58a, #778768, #525c48, #2f342a, #0e0f0d);
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+
 }
 
 h1{

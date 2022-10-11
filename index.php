@@ -48,7 +48,7 @@ if(isset($_POST['submit']))
         include 'includes/header.php';
         include 'includes/nav.php';
  ?>
-       
+    <main>
     <p>Welcome to Rate Trent Food. This a website where you can give a rating to a dish served in any of Trent University's Cafes from 1-5</p>
     <form name="search" id="search" method="post" novalidate>
 
@@ -70,16 +70,19 @@ if(isset($_POST['submit']))
 
     <!-- The result section is hidden until there is aything found -->
     <div id="searchresult" class = "<?=!isset($food) ? 'hidden':"";?>"> 
-    <p>Search Result: </p>
+    <h2>Search Result: </h2>
     <?php foreach($food as $fooditem):?>
         <ul>
             <li>Name: <?= $fooditem?></li>
         </ul>
     <?php endforeach; ?>
     </div>
+
+    </main>
     
     <?php
         include 'includes/footer.php';
     ?>
+    
 </body>
 </html>

@@ -51,7 +51,7 @@ if (isset($_POST['submit']))
             $from = "ratetrentfood@gmail.com";
             $to = $email;  //put user's email here
             $subject = "Password Reset Link";
-            $body = "Click <a href='https://loki.trentu.ca/~hamzasalimattarwala/3420/project/Project_forgotpassword_reset.php?code=$code'>here</a> to reset your password";
+            $body = "Click <a href='https://loki.trentu.ca/~hamzasalimattarwala/3850/forgotpasswordreset.php?code=$code'>here</a> to reset your password";
             $host = "smtp.trentu.ca";
             $headers = array ('From' => $from,
               'To' => $to,

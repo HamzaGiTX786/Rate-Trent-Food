@@ -15,7 +15,7 @@ $passwordnew = $_POST['passwordnew'] ?? null;
 
 if (isset($_POST['submit']))
 {
-    if(!isset($passwordnew) || strlen($passwordnew) === 0) //make sure a password was given
+    if(!isset($passwordnew) || strlen($passwordnew) > 8) //make sure a password was given
     {
         $errors['password'] = true;
     }
@@ -32,6 +32,7 @@ if (isset($_POST['submit']))
             $result = mysqli_stmt_get_result($stmt);
             $row = mysqli_fetch_assoc($result);
             }
+
         if($row)
         {
             $queryupdate = 'UPDATE Users SET password=? WHERE email=?';
@@ -41,8 +42,8 @@ if (isset($_POST['submit']))
                 echo "SQL prepare failed";
             }
             else{
-            mysqli_stmt_bind_param($statement,"ss",password_hash($passwordnew, PASSWORD_BCRYPT),$row[2]);
-            mysqli_stmt_execute($stmt);
+            mysqli_stmt_bind_param($statement,"ss",password_hash($passwordnew, PASSWORD_BCRYPT),$row['email']);
+            mysqli_stmt_execute($statement);
 
             $querydelete = "DELETE FROM resetPassword WHERE code=?";
             $stm = mysqli_stmt_init($conn);
@@ -60,6 +61,7 @@ if (isset($_POST['submit']))
         }
         else{
             exit("Error! This link was already used");
+            die();
         }
     }
 }
@@ -85,7 +87,7 @@ if (isset($_POST['submit']))
                 <div>
                     <label for="passwordnew">New Password:</label>
                     <input type="password" id="passwordnew" name="passwordnew" required>
-                    <span class="error <?=!isset($errors['password']) ? 'hidden' : "";?>">Please enter a password</span>
+                    <span class="error <?=!isset($errors['password']) ? 'hidden' : "";?>">Please enter a password thats greater than 8 character!</span>
                 </div>
                 <div>
                     <button type="submit" name="submit">Submit</button>

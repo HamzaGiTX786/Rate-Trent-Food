@@ -16,7 +16,7 @@ body{
     display: flex;
     justify-content:space-between;
     flex-direction: column;
-    background-image: linear-gradient(to left top, #9fb58a, #778768, #525c48, #2f342a, #0e0f0d);
+    background-image: linear-gradient(to left bottom, #154734, #17564f, #266469, #3e7281, #5b7f95);
     font-family: 'Comfortaa', cursive;
     font-weight: 500;
 
@@ -66,13 +66,14 @@ nav ul a:hover, nav ul a:visited:hover {
 }
 
 main {
-    background: #fff;
+    background: #B15533;
     width: 75%;
     margin: 7em auto;
     padding: 4em;
     border-radius: 2em;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
     min-height: 75%;
+    color: #fff;
 }
 
 footer {
@@ -146,7 +147,7 @@ input {
 }
 
 button[type="submit"] {
-    background-image: linear-gradient(to left top, #9fb58a, #778768, #525c48, #2f342a, #0e0f0d);
+    background-image: linear-gradient(to left bottom, #154734, #17564f, #266469, #3e7281, #5b7f95);
     padding: 1em;
     border-radius: 0.5em;
     font-size: 1.2em;

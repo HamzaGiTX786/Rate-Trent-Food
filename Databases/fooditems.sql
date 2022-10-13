@@ -134,7 +134,102 @@ INSERT INTO `fooditems` (`itemid`, `itemname`, `price`, `calories`, `cafe`, `bui
 (84, 'Chicken shawarma', '8.99', 350, 'Parea Mediterranean Cuisine' 'Gzowski');
 (85, 'Craft Your Own Salad or Wrap', '7.99', 00, 'Parea Mediterranean Cuisine' 'Gzowski');
 
+(85, 'Big breakfast', '8.99', 950, 'Grill & Co Breakfast' 'Otonabee');
+(86, 'Bacon or sausage breakfast sandwich', '4.99', 390, 'Grill & Co Breakfast' 'Otonabee');
+(87, 'Egg & cheese breakfast sandwich', '4.19', 290, 'Grill & Co Breakfast' 'Otonabee');
+(88, 'Field roast plant based sandwich', '8.99', 470, 'Grill & Co Breakfast' 'Otonabee');
+(89, 'Western sandwich', '6.29', 420, 'Grill & Co Breakfast' 'Otonabee');
+(90, 'BLT on a bagel', '7.49', 460, 'Grill & Co Breakfast' 'Otonabee');
+(91, 'Add coffee & hashbrowns', '4.10', 470, 'Grill & Co Breakfast' 'Otonabee');
+(92, 'Western sandwich', '6.29', 470, 'Grill & Co Breakfast' 'Otonabee');
+(93, 'Add coffee & hashbrowns', '4.10', 490, 'Grill & Co Breakfast' 'Otonabee');
+(94, 'Side of hashbrown', '2.99', 490, 'Grill & Co Breakfast' 'Otonabee');
+(95, 'Plain bagel', '2.29', 280, 'Grill & Co Breakfast' 'Otonabee');
+(96, 'Multigrain bagel', '2.29', 300, 'Grill & Co Breakfast' 'Otonabee');
+(97, 'Bagel with cream cheese', '3.29', 410, 'Grill & Co Breakfast' 'Otonabee');
+(98, 'Upgrade any breakfast sandwich to a bagel', '1.29', 300, 'Grill & Co Breakfast' 'Otonabee');
 
+(99, 'North burger', '8.99', 580, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(100, 'Great one', '8.49', 520, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(101, 'Canuck', '7.79', 520, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(102, 'The gardener', '7.69', 440, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(103, 'Lightlife burger', '8.49', 540, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(104, 'Northern fried chicken', '8.59', 520, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(105, 'Tragically chick', '8.59', 350, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(106, 'B’y the bay', '8.49', 580, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(107, 'Love me tenders', '7.89', 380, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(108, 'Regular fries', '3.49', 420, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(109, 'Large fries', '3.99', 560, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(110, 'Sweet potato fries', '4.49', 690, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(111, 'Poutine', '6.49', 730, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(112, 'Onion rings', '4.99', 480, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(113, 'Gravy', '1.35', 70, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(114, 'Coleslaw', '1.99', 70, 'Grill & Co Lunch & Dinner' 'Otonabee');
+(115, 'Combo', '5.00', 70, 'Grill & Co Lunch & Dinner' 'Otonabee');
+
+(116, 'Classic slice + fountain pop', '6.99', 600, 'Pizza Pizza' 'Otonabee');
+(117, 'Classic slice + fountain pop + bag of chips', '7.99', 510, 'Pizza Pizza' 'Otonabee');
+(118, 'Any 2 classic slice', '8.69', 600, 'Pizza Pizza' 'Otonabee');
+(119, 'Add dip', '1.29', 350, 'Pizza Pizza' 'Otonabee');
+(120, 'Classic slices', '4.79', 70, 'Pizza Pizza' 'Otonabee');
+(121, 'Specialty slices', '4.99', 600, 'Pizza Pizza' 'Otonabee');
+(122, 'Campus combo', '26.99', 880, 'Pizza Pizza' 'Otonabee');
+(123, 'XL 16” classic pizza', '20.99', 680, 'Pizza Pizza' 'Otonabee');
+(124, 'XL 16” specialty pizza', '22.99', 900, 'Pizza Pizza' 'Otonabee');
+(125, '10” gluten free pizza', '13.99', 240, 'Pizza Pizza' 'Otonabee');
+
+(126, 'Chop’d Caesar', '11.29', 620, 'Chop’d & Wrap’d Bowls & Wraps', 'Lady Eaton');
+(127, 'Chop’d Greek', '11.29', 620, 'Chop’d & Wrap’d Bowls & Wraps', 'Lady Eaton');
+(128, 'Chop’d southwest', '11.29', 580, 'Chop’d & Wrap’d Bowls & Wraps', 'Lady Eaton');
+(129, 'Chop’d chick’p', '10.99', 600, 'Chop’d & Wrap’d Bowls & Wraps', 'Lady Eaton');
+(130, 'Create Your Own Wrap or Salad', '11.29', 620, 'Chop’d & Wrap’d Bowls & Wraps', 'Lady Eaton');
+(131, 'Add Halal chicken', '2.99', 140, 'Chop’d & Wrap’d Bowls & Wraps', 'Lady Eaton');
+(132, 'Add falafel ball', '2.79', 210, 'Chop’d & Wrap’d Bowls & Wraps', 'Lady Eaton');
+(133, 'Add whole boiled egg', '1.99', 70, 'Chop’d & Wrap’d Bowls & Wraps', 'Lady Eaton');
+(134, 'White tortilla', '0', 280, 'Chop’d & Wrap’d Bowls & Wraps', 'Lady Eaton');
+(135, 'Whole wheat tortilla', '0', 280, 'Chop’d & Wrap’d Bowls & Wraps', 'Lady Eaton');
+
+(136, 'Big breakfast', '10.99', 640, 'Chef’s Table Breakfast', 'Lady Eaton');
+(137, 'BLT sandwich', '7.59', 380, 'Chef’s Table Breakfast', 'Lady Eaton');
+(138, 'Breakfast sandwich', '6.49', 340, 'Chef’s Table Breakfast', 'Lady Eaton');
+(139, 'Without protein', '5.99', 270, 'Chef’s Table Breakfast', 'Lady Eaton');
+(140, 'Breakfast wrap', '7.29', 680, 'Chef’s Table Breakfast', 'Lady Eaton');
+(85, 'GLT sandwich', '5.99', 390, 'Chef’s Table Breakfast', 'Lady Eaton');
+(85, 'Veggie bagel supreme', '5.99', 470, 'Chef’s Table Breakfast', 'Lady Eaton');
+(85, 'Toasted bagel', '2.49', 350, 'Chef’s Table Breakfast', 'Lady Eaton');
+(85, 'Guac toast', '3.79', 440, 'Chef’s Table Breakfast', 'Lady Eaton');
+(85, 'Toasted bagel', '3.79', 440, 'Chef’s Table Breakfast', 'Lady Eaton');
+(29, '2 triangle hash browns', '2.29', 290, 'Chef’s Table Breakfast', 'Lady Eaton');
+(30, 'Side of toast', '2.29', 220, 'Chef’s Table Breakfast', 'Lady Eaton');
+(31, 'Add guac and hummus', '1.79', 270, 'Chef’s Table Breakfast', 'Lady Eaton');
+(32, 'Add bacon or sausage', '2.09', 70, 'Chef’s Table Breakfast', 'Lady Eaton');
+(33, 'Add cheese', '2.09', 80, 'Chef’s Table Breakfast', 'Lady Eaton');
+(34, 'Upgrade to bagel', '2.09', 80, 'Chef’s Table Breakfast', 'Lady Eaton');
+
+(3, 'Chicken twister wrap', '10.49', 710, 'Chef’s Table Lunch & Dinner' 'Lady Eaton');
+(2, 'Love me tenders', '9.49', 300, 'Chef’s Table Lunch & Dinner', 'Lady Eaton');
+(2, 'Plant-based lightlife burger', '8.99', 530, 'Chef’s Table Lunch & Dinner', 'Lady Eaton');
+(2, 'Jalapeno popper grilled cheese', '9.29', 720, 'Chef’s Table Lunch & Dinner', 'Lady Eaton');
+(2, 'Grilled cheese', '5.79', 470, 'Chef’s Table Lunch & Dinner', 'Lady Eaton');
+(2, 'BLT sandwich', '7.59', 380, 'Chef’s Table Lunch & Dinner', 'Lady Eaton');
+(2, 'Veggie Bagel Supreme', '5.99', 470, 'Chef’s Table Lunch & Dinner', 'Lady Eaton');
+(2, 'Guac toast', '3.79', 440, 'Chef’s Table Lunch & Dinner', 'Lady Eaton');
+(2, 'GLT sandwich', '5.99', 390, 'Chef’s Table Lunch & Dinner', 'Lady Eaton');
+(2, 'Toasted bagel', '2.49', 350, 'Chef’s Table Lunch & Dinner', 'Lady Eaton');
+(2, 'with cheese or cream cheese', '3.49', 370, 'Chef’s Table Lunch & Dinner', 'Lady Eaton');
+
+(2, 'Ham + pineapple pizza', '7.99', 500, 'San Marzano', 'Lady Eaton');
+(2, 'Margherita pizza', '7.49', 520, 'San Marzano', 'Lady Eaton');
+(2, 'Pepperoni pizza', '7.49', 510, 'San Marzano', 'Lady Eaton');
+(2, 'Veggie deluxe pizza', '7.99', 500, 'San Marzano', 'Lady Eaton');
+(2, 'Mozzarella pizza', '7.29', 470, 'San Marzano', 'Lady Eaton');
+(2, 'Ham + pineapple pizza', '7.99', 500, 'San Marzano', 'Lady Eaton');
+(2, 'Diavolo pizza', '9.29', 640, 'San Marzano', 'Lady Eaton');
+(2, 'Sauce + mozza + 2 toppings', '7.59', 640, 'San Marzano', 'Lady Eaton');
+(2, 'Each individual topping', '1.59', 00, 'San Marzano', 'Lady Eaton');
+(2, 'Sauce + mozza + 2 toppings', '7.59', 640, 'San Marzano', 'Lady Eaton');
+(2, 'Kale Caesar salad', '5.99', 170, 'San Marzano', 'Lady Eaton');
+(2, 'Roasted red pepper salad', '5.59', 250, 'San Marzano', 'Lady Eaton');
 --
 -- Indexes for dumped tables
 --

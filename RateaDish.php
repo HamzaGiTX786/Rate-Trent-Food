@@ -25,7 +25,7 @@ $city = $_POST['city'] ?? null;
 $party = $_POST['party'] ?? null;
 $dining = $_POST['dining'] ?? null;
 
-$query = "SELECT * FROM University"; //select the row of the table with the given username
+$query = "SELECT * FROM University"; //change it to fooditem database 
 $stmt = mysqli_stmt_init($conn);
 
 if(!mysqli_stmt_prepare($stmt,$query))
@@ -89,8 +89,7 @@ if(isset($_POST['submit']))
         $errors['dining'] = true; //throw an error the user has not made a choice
     }
     
-    echo $academic;
-    
+    // add the rating to the rating database
     if(count($errors) === 0)
     {
         $query = "INSERT INTO UserResponse values (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -118,7 +117,7 @@ if(isset($_POST['submit']))
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Stars4Uni&colon; Leave a Review</title>
-        <link rel="stylesheet" href="styles/website_master.css" />
+        <link rel="stylesheet" href="styles/master.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     </head>
     <body>

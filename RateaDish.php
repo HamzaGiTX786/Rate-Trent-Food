@@ -25,7 +25,7 @@ $city = $_POST['city'] ?? null;
 $party = $_POST['party'] ?? null;
 $dining = $_POST['dining'] ?? null;
 
-$query = "SELECT * FROM University"; //change it to fooditem database 
+$query = "SELECT * FROM fooditems ORDER BY itemname ASC"; //change it to fooditem database 
 $stmt = mysqli_stmt_init($conn);
 
 if(!mysqli_stmt_prepare($stmt,$query))
@@ -103,7 +103,7 @@ if(isset($_POST['submit']))
             {
                 echo "Bind fail";
             }
-            var_dump(mysqli_stmt_execute($stmt))
+            var_dump(mysqli_stmt_execute($stmt));
             
         }
     }
@@ -133,7 +133,7 @@ if(isset($_POST['submit']))
                         <select name="uni" id="uni">
                 <option value=""> Select a university</option>
                    <?php foreach($getuni as $uni):?>
-                <option value = <?=$uni[1];?>> <?php echo $uni[0] ?> </option>
+                <option value = <?=$uni[0];?>> <?php echo $uni[1]." - ".$uni[4]." - ".$uni[5]?> </option>
                 <?php endforeach ?>
                 </select>
                 <span class="error <?=!isset($errors['uni']) ? 'hidden' : "";?>">Please select a University</span> 

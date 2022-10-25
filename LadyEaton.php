@@ -57,6 +57,16 @@ if(isset($_POST['submit']))
  <h2>Lady Eaton Menu </h2>
 </header>
      
+          <div class="dropdown">
+  <button class="dropbtn"> Lady Eaton Dining Hall features the following: </button>
+  <div class="dropdown-content">
+   <a href="Chef'sTableBreakfastMenu.pdf"> Parea </a>
+   <a href="Chef'sTableLunchDinnerMenu.pdf"> Chef's Table Lunch & Dinner </a>
+   <a href="LadyEatonChopdWrapdMenu.pdf"> Chop'd & Wrap'd </a>
+   <a href="SanMarzanoMenu.pdf"> San Marzano </a>
+  </div>
+</div>  
+     
 <p> Lady Eaton Dining Hall features the following:
 
 <p> Chop'd & Wrap'd - Classic or build your own fresh wraps or salads <a href="LadyEatonChopdWrapdMenu.pdf">Menu</a>.</p> 

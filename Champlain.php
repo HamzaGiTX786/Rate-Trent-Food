@@ -52,19 +52,20 @@ if(isset($_POST['submit']))
     <form name="search" id="search" method="post" novalidate>
 
 <header>
-    <h1>Otonabee</h1>
- <h2>Otonabee Menu </h2>
+    <h1>Champlain</h1>
+ <h2> Champlain Menu </h2>
 </header>
      
-<p> Otonabee Dining Hall features the following:
+<p> Champlain Dining Hall features the following:
 
-<p> Grill & Co - All day breakfast, classic grill menu featuring 100% Canadian beef and monthly features <a href="OtonabeeBreakfastMenu.pdf">Menu</a>.</p> 
+<p> Champlain Grill & Co - All day breakfast, classic grill menu featuring 100% Canadian beef and monthly features <a href="ChamplainBreakfastMenu.pdf">Menu</a>.</p> 
 
-<p> Grill & Co - Lunch & dinner  <a href="OtonabeeLunch&DinnerMenu.pdf">Menu</a>.</p>      
+<p> Champlain Grill & Co - Lunch & dinner  <a href="ChamplainLunch&DinnerMenu.pdf">Menu</a>.</p>      
     
-<p> Pizza Pizza - Offering both slices and full-size pizzas upon request <a href="PizzaPizzaMenu.pdf">Menu</a>.</p> 
+<p> Revolution Noodle - That familiar taste of classic Vietnamese to Japanese comfort foods. This new station delivers authentic and electric flavours using the freshest produce, authentic noodles and delicious broths <a href="RevolutionNoodleMenu.pdf">Menu</a>.</p> 
+ 
+<p> El Diablito Taqueria <a href="ChamplainElDiablitoTaqueria.pdf">Menu</a>.</p>  
      
- Subway - Classic or build your own subs & salads
 </p>
  
  

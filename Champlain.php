@@ -65,7 +65,7 @@ if(isset($_POST['submit']))
 <p> Pizza Pizza - Offering both slices and full-size pizzas upon request <a href="PizzaPizzaMenu.pdf">Menu</a>.</p> 
      
  Subway - Classic or build your own subs & salads
-<p>
+</p>
  
  
      

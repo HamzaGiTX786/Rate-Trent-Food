@@ -56,9 +56,17 @@ if(isset($_POST['submit']))
  <h2>Gzowski Menu </h2>
 </header>
      
+     <div class="dropdown">
+  <button class="dropbtn"> Gzowski Dining Hall features the following: </button>
+  <div class="dropdown-content">
+    <a href="GzowskiLocalGrillMenu.pdf"> The Local Grill </a>
+    <a href="PereaMediterraneanMenu.pdf"> Parea </a>
+  </div>
+</div>      
+     
 <p> Gzowski Dining Hall features the following:
 
-<p> The Local Grill - Signature grill menu featuring local cheese & breads. Lots of unique finds! <a href="OtonabeeBreakfastMenu.pdf">Menu</a>.</p> 
+<p> The Local Grill - Signature grill menu featuring local cheese & breads. Lots of unique finds! <a href="GzowskiLocalGrillMenu.pdf">Menu</a>.</p> 
     
 <p> Parea - Offering Mediterranean selections, including a wide variety of pastas, naanzas, salads & wraps & baked sandwiches <a href="PereaMediterraneanMenu.pdf">Menu</a>.</p> 
      

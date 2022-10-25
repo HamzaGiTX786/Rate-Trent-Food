@@ -56,6 +56,16 @@ if(isset($_POST['submit']))
  <h2> Champlain Menu </h2>
 </header>
      
+     <div class="dropdown">
+  <button class="dropbtn"> Champlain Dining Hall features the following: </button>
+  <div class="dropdown-content">
+    <a href="ChamplainBreakfastMenu.pdf"> Champlain Grill & Co - All day breakfast </a>
+    <a href="ChamplainLunch&DinnerMenu.pdf.php">Champlain Grill & Co - Lunch & dinner</a>
+    <a href="ChamplainElDiablitoTaqueria.pdf">El Diablito Taqueria</a>
+   <a href="RevolutionNoodleMenu.pdf">Revolution Noodle</a>
+  </div>
+</div>     
+     
 <p> Champlain Dining Hall features the following:
 
 <p> Champlain Grill & Co - All day breakfast, classic grill menu featuring 100% Canadian beef and monthly features <a href="ChamplainBreakfastMenu.pdf">Menu</a>.</p> 

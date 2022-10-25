@@ -52,31 +52,21 @@ if(isset($_POST['submit']))
     <p>Welcome to Rate Trent Food. This a website where you can give a rating to a dish served in any of Trent University's Cafes from 1-5</p>
     <form name="search" id="search" method="post" novalidate>
 
-        <!-- Search bar -->
-    <div>
-        <label for="search">Search for a dish:</label>
-        <input type="text" name="search" id="search" placeholder="Search" />
-        <span class="error <?=!isset($errors['search']) ? 'hidden' : "";?>">Please enter item to be searched!</span>
-    </div>
+<header>
+    <h1>Otonabee</h1>
+ <h2>Otonabee Menu </h2>
+</header>
+     
+<p> Otonabee Dining Hall features the following:
 
-    <!-- Button to submit -->
+<p> Grill & Co - All day breakfast, classic grill menu featuring 100% Canadian beef and monthly features <a href="OtonabeeBreakfastMenu.pdf">Menu</a>.</p> 
 
-    <div id="buttons">
-    <button type="submit" name="submit">Search</button>
-    </div>
-    </form>
-
-    <!-- Search Results -->
-
-    <!-- The result section is hidden until there is aything found -->
-    <div id="searchresult" class = "<?=!isset($food) ? 'hidden':"";?>"> 
-    <h2>Search Result: </h2>
-    <?php foreach($food as $fooditem):?>
-        <ul>
-            <li>Name: <?= $fooditem?></li>
-        </ul>
-    <?php endforeach; ?>
-    </div>
+<p> Grill & Co - Lunch & dinner  <a href="OtonabeeLunch&DinnerMenu.pdf">Menu</a>.</p>      
+    
+<p> Pizza Pizza - Offering both slices and full-size pizzas upon request <a href="PizzaPizzaMenu.pdf">Menu</a>.</p> 
+     
+ Subway - Classic or build your own subs & salads
+</p>
 
     </main>
     

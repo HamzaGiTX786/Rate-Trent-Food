@@ -57,6 +57,16 @@ if(isset($_POST['submit']))
  <h2>Otonabee Menu </h2>
 </header>
      
+  <div class="dropdown">
+  <button class="dropbtn"> Otonabee Dining Hall features the following: </button>
+  <div class="dropdown-content">
+   <a href="OtonabeeBreakfastMenu.pdf"> Grill & Co - All day breakfast </a>
+   <a href="OtonabeeLunch&DinnerMenu.pdf"> Chef's Table Lunch & Dinner </a>
+   <a href="PizzaPizzaMenu.pdf"> Pizza Pizza </a>
+   <a href="https://order.subway.com/en-CA/MenuNutrition/Menu"> Subway </a>
+  </div>
+</div> 
+     
 <p> Otonabee Dining Hall features the following:
 
 <p> Grill & Co - All day breakfast, classic grill menu featuring 100% Canadian beef and monthly features <a href="OtonabeeBreakfastMenu.pdf">Menu</a>.</p> 
@@ -64,8 +74,10 @@ if(isset($_POST['submit']))
 <p> Grill & Co - Lunch & dinner  <a href="OtonabeeLunch&DinnerMenu.pdf">Menu</a>.</p>      
     
 <p> Pizza Pizza - Offering both slices and full-size pizzas upon request <a href="PizzaPizzaMenu.pdf">Menu</a>.</p> 
+
+<p> Subway - Classic or build your own subs & salads <a href="https://order.subway.com/en-CA/MenuNutrition/Menu">Menu</a>.</p>
      
- Subway - Classic or build your own subs & salads
+ <p> 
 </p>
 
     </main>

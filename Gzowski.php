@@ -45,38 +45,24 @@ if(isset($_POST['submit']))
 <body>
  
 <?php
-        include 'includes/header.php';
         include 'includes/navfood.php';
  ?>
     <main>
     <p>Welcome to Rate Trent Food. This a website where you can give a rating to a dish served in any of Trent University's Cafes from 1-5</p>
     <form name="search" id="search" method="post" novalidate>
+     
+<header>
+    <h1>Gzowski</h1>
+ <h2>Gzowski Menu </h2>
+</header>
+     
+<p> Gzowski Dining Hall features the following:
 
-        <!-- Search bar -->
-    <div>
-        <label for="search">Search for a dish:</label>
-        <input type="text" name="search" id="search" placeholder="Search" />
-        <span class="error <?=!isset($errors['search']) ? 'hidden' : "";?>">Please enter item to be searched!</span>
-    </div>
-
-    <!-- Button to submit -->
-
-    <div id="buttons">
-    <button type="submit" name="submit">Search</button>
-    </div>
-    </form>
-
-    <!-- Search Results -->
-
-    <!-- The result section is hidden until there is aything found -->
-    <div id="searchresult" class = "<?=!isset($food) ? 'hidden':"";?>"> 
-    <h2>Search Result: </h2>
-    <?php foreach($food as $fooditem):?>
-        <ul>
-            <li>Name: <?= $fooditem?></li>
-        </ul>
-    <?php endforeach; ?>
-    </div>
+<p> The Local Grill - Signature grill menu featuring local cheese & breads. Lots of unique finds! <a href="OtonabeeBreakfastMenu.pdf">Menu</a>.</p> 
+    
+<p> Parea - Offering Mediterranean selections, including a wide variety of pastas, naanzas, salads & wraps & baked sandwiches <a href="PereaMediterraneanMenu.pdf">Menu</a>.</p> 
+     
+</p>
 
     </main>
     

@@ -45,38 +45,29 @@ if(isset($_POST['submit']))
 <body>
  
 <?php
-        include 'includes/header.php';
+
         include 'includes/navfood.php';
  ?>
     <main>
     <p>Welcome to Rate Trent Food. This a website where you can give a rating to a dish served in any of Trent University's Cafes from 1-5</p>
     <form name="search" id="search" method="post" novalidate>
 
-        <!-- Search bar -->
-    <div>
-        <label for="search">Search for a dish:</label>
-        <input type="text" name="search" id="search" placeholder="Search" />
-        <span class="error <?=!isset($errors['search']) ? 'hidden' : "";?>">Please enter item to be searched!</span>
-    </div>
+     <header>
+    <h1>Lady Eaton</h1>
+ <h2>Lady Eaton Menu </h2>
+</header>
+     
+<p> Lady Eaton Dining Hall features the following:
 
-    <!-- Button to submit -->
+<p> Chop'd & Wrap'd - Classic or build your own fresh wraps or salads <a href="LadyEatonChopdWrapdMenu.pdf">Menu</a>.</p> 
 
-    <div id="buttons">
-    <button type="submit" name="submit">Search</button>
-    </div>
-    </form>
+<p> Chef's Table Breakfast - Breakfast items, comfort food and daily homestyle lunch & dinners <a href="Chef'sTableBreakfastMenu.pdf">Menu</a>.</p>      
+    
+<p> Chef's Table Lunch & Dinner - Breakfast items, comfort food and daily homestyle lunch & dinners  <a href="Chef'sTableLunchDinnerMenu.pdf">Menu</a>.</p> 
+     
+<p> San Marzano - Customizable, handmade pizzas featuring fresh ingredients that are ready in just 3 minutes! <a href="SanMarzanoMenu.pdf">Menu</a>.</p>      
 
-    <!-- Search Results -->
-
-    <!-- The result section is hidden until there is aything found -->
-    <div id="searchresult" class = "<?=!isset($food) ? 'hidden':"";?>"> 
-    <h2>Search Result: </h2>
-    <?php foreach($food as $fooditem):?>
-        <ul>
-            <li>Name: <?= $fooditem?></li>
-        </ul>
-    <?php endforeach; ?>
-    </div>
+</p>
 
     </main>
     

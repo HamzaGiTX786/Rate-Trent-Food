@@ -45,7 +45,7 @@ if(isset($_POST['submit']))
 <body>
  
 <?php
-        include 'includes/header.php';
+
         include 'includes/navfood.php';
  ?>
     <main>

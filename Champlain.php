@@ -60,7 +60,7 @@ if(isset($_POST['submit']))
   <button class="dropbtn"> Champlain Dining Hall features the following: </button>
   <div class="dropdown-content">
     <a href="ChamplainBreakfastMenu.pdf"> Champlain Grill & Co - All day breakfast </a>
-    <a href="ChamplainLunch&DinnerMenu.pdf.php">Champlain Grill & Co - Lunch & dinner</a>
+    <a href="ChamplainLunch&DinnerMenu.pdf">Champlain Grill & Co - Lunch & dinner</a>
     <a href="ChamplainElDiablitoTaqueria.pdf">El Diablito Taqueria</a>
    <a href="RevolutionNoodleMenu.pdf">Revolution Noodle</a>
   </div>

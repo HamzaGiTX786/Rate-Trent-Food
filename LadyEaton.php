@@ -60,7 +60,7 @@ if(isset($_POST['submit']))
           <div class="dropdown">
   <button class="dropbtn"> Lady Eaton Dining Hall features the following: </button>
   <div class="dropdown-content">
-   <a href="Chef'sTableBreakfastMenu.pdf"> Parea </a>
+   <a href="Chef'sTableBreakfastMenu.pdf"> Chef's Table Breakfast </a>
    <a href="Chef'sTableLunchDinnerMenu.pdf"> Chef's Table Lunch & Dinner </a>
    <a href="LadyEatonChopdWrapdMenu.pdf"> Chop'd & Wrap'd </a>
    <a href="SanMarzanoMenu.pdf"> San Marzano </a>

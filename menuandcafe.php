@@ -62,6 +62,38 @@ if(isset($_POST['submit']))
   </div>
 </div>
      
+<nav class="navbar">
+ <ul>
+  <li><a href="Champlain.php">Champlain</a>
+        <ul>
+         <li><a href="ChamplainBreakfastMenu.pdf">Champlain Grill & Co - All day breakfast</a></li>
+         <li><a href="ChamplainLunch&DinnerMenu.pdf">Champlain Grill & Co - Lunch & dinner</a></li>
+         <li><a href="ChamplainElDiablitoTaqueria.pdf">El Diablito Taqueria</a></li>
+         <li><a href="RevolutionNoodleMenu.pdf">Revolution Noodle</a></li>
+   </ul>
+  </li>
+  <li><a href="Gzowski.php">Gzowski</a></li>
+  <ul>
+         <li><a href="GzowskiLocalGrillMenu.pdf"> The Local Grill </a></li>
+         <li><a href="PereaMediterraneanMenu.pdf"> Parea </a></li>
+  </ul>
+  </li>
+  <li><a href="LadyEaton.php">LadyEaton</a></li>
+   <ul>
+         <li><a href="Chef'sTableBreakfastMenu.pdf"> Chef's Table Breakfast </a></li>
+         <li><a href="Chef'sTableLunchDinnerMenu.pdf"> Chef's Table Lunch & Dinner </a></li>
+         <li><a href="LadyEatonChopdWrapdMenu.pdf"> Chop'd & Wrap'd </a></li>
+         <li><a href="SanMarzanoMenu.pdf"> San Marzano </a></li>
+   </ul>
+  <li><a href="Otonabee.php">Otonabee</a></li>
+ <ul>
+         <li> <a href="OtonabeeBreakfastMenu.pdf"> Grill & Co - All day breakfast </a></li>
+         <li><a href="OtonabeeLunch&DinnerMenu.pdf"> Chef's Table Lunch & Dinner </a></li>
+         <li><a href="PizzaPizzaMenu.pdf"> Pizza Pizza </a></li>
+         <li><a href="https://order.subway.com/en-CA/MenuNutrition/Menu"></li>
+   </ul>
+ </ul>
+     </nav>
    
 
         <!-- Search bar -->

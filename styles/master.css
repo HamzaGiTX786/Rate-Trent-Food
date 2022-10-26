@@ -192,23 +192,34 @@ dropdown-content a {
 navfood ul{
     display: flex;
     flex-direction: row;
+    position: relative;
     justify-content: space-evenly;
+    list-style:none;
 }
-
-navfood ul a, nav ul a:visited {
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Comfortaa', cursive;
-    text-shadow: 0.1em 0px 1px #333;
-    padding: 1em;
+    
+navfood ul li ul {
+  display: none;
+  position:absolute;
+  background-color: #fff;
+  text-decoration: none;
+  font-family: 'Comfortaa', cursive;
+  text-shadow: 0.1em 0px 1px #333;
+  padding: 1em;
+  border-radius: 0.3em;  
 }
-
-navfood ul a:hover, nav ul a:visited:hover {
-    background: var(--light);
-    border-radius: 0.3em;
-    text-shadow: 0px 0px 0px;
-    color: #fff;
+    
+navfood ul li:hover  {
+  display: block;  
 }    
+    
+navfood ul li ul a {
+  width: 180px:  
+  padding: 1em;  
+}    
+    
+navfood ul li ul a:hover {
+  background-color: #f3f3f3;  
+}         
 
 main p{
     padding-left: 1em;

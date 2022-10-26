@@ -1,0 +1,58 @@
+
+.wrapper {
+    display: grid;
+    
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    grid-auto-rows: 150px;
+    grid-template-areas:
+      "a a a a b b b b"
+      "a a a a b b b b";
+  }
+  h2{
+    justify-content: center;
+  }
+  .item1 {
+    grid-area: a;
+    background-color: gray;
+  }
+  .item2 {
+    grid-area: b;
+    justify-content: center;
+    
+  }
+  .rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left}
+  
+  .rating > input{
+   display:none;
+  }
+  
+  .rating > label {
+  position: relative;
+  width: 1.1em;
+  font-size: 2vw;
+  color: #FFD700;
+  cursor: pointer;
+  }
+  
+  .rating > label::before{
+  content: "\2605";
+  position: absolute;
+  opacity: 0;
+  }
+  
+  .rating > label:hover:before,
+  .rating > label:hover ~ label:before {
+  opacity: 1 !important;
+  }
+  
+  .rating > input:checked ~ label:before{
+  opacity:1;
+  }
+  
+  .rating:hover > input:checked ~ label:before{ 
+  opacity: 0.4;
+   }

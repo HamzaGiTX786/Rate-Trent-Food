@@ -188,7 +188,27 @@ dropdown-content a {
   text-decoration: none;
   display: block;
 }
+    
+navfood ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
+navfood ul a, nav ul a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    text-shadow: 0.1em 0px 1px #333;
+    padding: 1em;
+}
+
+navfood ul a:hover, nav ul a:visited:hover {
+    background: var(--light);
+    border-radius: 0.3em;
+    text-shadow: 0px 0px 0px;
+    color: #fff;
+}    
 
 main p{
     padding-left: 1em;

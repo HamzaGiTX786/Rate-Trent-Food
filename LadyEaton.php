@@ -45,8 +45,8 @@ if(isset($_POST['submit']))
 <body>
  
 <?php
-
-        include 'includes/navfood.php';
+        
+        include 'includes/nav.php';
  ?>
     <main>
     <p>Welcome to Rate Trent Food. This a website where you can give a rating to a dish served in any of Trent University's Cafes from 1-5</p>
@@ -57,7 +57,7 @@ if(isset($_POST['submit']))
  <h2>Lady Eaton Menu </h2>
 </header>
      
-          <div class="dropdown">
+        <div class="dropdown">
   <button class="dropbtn"> Lady Eaton Dining Hall features the following: </button>
   <div class="dropdown-content">
    <a href="Chef'sTableBreakfastMenu.pdf"> Chef's Table Breakfast </a>

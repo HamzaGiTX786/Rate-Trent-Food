@@ -108,7 +108,7 @@
                <p>Would you like to leave a review?</p>
                <br>
                <textarea rows="14" cols="40" name="review" maxlength="250">
-</textarea>
+            </textarea>
             </div>
             </div>
             <div id="buttons">    

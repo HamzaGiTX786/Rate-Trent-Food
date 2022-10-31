@@ -46,7 +46,7 @@ if(isset($_POST['submit']))
  
 <?php
         include 'includes/header.php';
-        include 'includes/navfood.php';
+        include 'includes/nav.php';
  ?>
     <main>
     <p>Welcome to Rate Trent Food. This a website where you can give a rating to a dish served in any of Trent University's Cafes from 1-5</p>

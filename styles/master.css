@@ -188,7 +188,7 @@ input[type="checkbox"]{
   display: block;
 }
     
-navfood ul{
+#navfood ul{
     display: flex;
     flex-direction: row;
     position: relative;
@@ -196,7 +196,7 @@ navfood ul{
     list-style:none;
 }
     
-navfood ul li ul {
+#navfood ul li ul {
   display: none;
   position:absolute;
   background-color: #fff;
@@ -207,16 +207,16 @@ navfood ul li ul {
   border-radius: 0.3em;  
 }
     
-navfood ul li:hover  {
+#navfood ul li:hover  {
   display: block;  
 }    
     
-navfood ul li ul a {
-  width: 180px:  
+#navfood ul li ul a {
+  width: 180px; 
   padding: 1em;  
 }    
     
-navfood ul li ul a:hover {
+#navfood ul li ul a:hover {
   background-color: #f3f3f3;  
 }         
 

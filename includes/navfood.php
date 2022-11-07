@@ -1,4 +1,4 @@
-<nav>
+<nav id="navfood">
             <ul>
                 <a href="Champlain.php"><li>Champlain</li></a>
                 <a href="Gzowski.php"><li>Gzowski</li></a>

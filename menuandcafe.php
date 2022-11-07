@@ -53,12 +53,13 @@ if(isset($_POST['submit']))
     <form name="search" id="search" method="post" novalidate>
      
      <div class="dropdown">
-  <button class="dropbtn"> Trent Colledge Dining Halls </button>
+  <button class="dropbtn"> Trent College - Dining Halls </button>
   <div class="dropdown-content">
     <a href="Champlain.php">Champlain</a>
     <a href="Gzowski.php">Gzowski</a>
     <a href="LadyEaton.php">LadyEaton</a>
-   <a href="Otonabee.php">Otonabee</a>
+   <a href="Otonabee.php">Otonabee<
+    /a>
   </div>
 </div>
      

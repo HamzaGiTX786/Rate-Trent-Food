@@ -15,25 +15,25 @@
  ?>
     <main>
      
-<p> Champlain Dining Hall features the following:</p>
+<p> Otonabee Dining Hall features the following:</p>
 
 <ul>
-    <li><a href="Menu/ChamplainBreakfastMenu.pdf">
+    <li><a href="Menu/OtonabeeBreakfastMenu.pdf">
         <img src="img/Grill and co.jpg" alt="Image of Grill and Co"/>
         <p>Grill & Co - All day breakfast<p>
         </a></li>
 
-    <li> <a href="Menu/ChamplainLunch&Dinner.pdf">
+    <li> <a href="Menu/OtonabeeLunch&DinnerMenu.pdf">
             <img src="img/Grill and co.jpg" alt= "Image of Grill and Co">
             <p>Grill & Co - Lunch & dinner</p>
     </a></li>
 
-    <li> <a href="http://www.pizzapizza.com">
-            <img src="img/Revolution noodle.jpg" alt= "Revolution Noodle logo">
+    <li> <a href="Menu/PizzaPizzaMenu.pdf">
+            <img src="img/Pizza Pizza.jpg" alt= "Revolution Noodle logo">
             <p>Pizza Pizza</p>
     </a></li>
     <li> <a href="http://www.subway.ca">
-            <img src="img/El diabilito.jpg" alt= " El Diablito Taqueria logo">
+            <img src="img/Subway.jpg" alt= " El Diablito Taqueria logo">
             <p>Subway</p>
     </a></li>
 

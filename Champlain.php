@@ -19,12 +19,12 @@
 
 <ul>
     <li><a href="Menu/ChamplainBreakfastMenu.pdf">
-        <img src="img/Grill and co.jpg" alt="Image of Grill and Co"/>
+        <img src="img/Grill House.jpg" alt="Image of Grill and Co"/>
         <p>Champlain Grill House - Until 11am<p>
         </a></li>
 
     <li> <a href="Menu/ChamplainLunch&Dinner.pdf">
-            <img src="img/Grill and co.jpg" alt= "Image of Grill and Co">
+            <img src="img/Grill House.jpg" alt= "Image of Grill and Co">
             <p>Champlain Grill House- Lunch & dinner</p>
     </a></li>
 

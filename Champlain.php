@@ -45,44 +45,36 @@ if(isset($_POST['submit']))
 <body>
  
 <?php
-        include 'includes/nav.php';
+       include 'includes/header.php';
+       include 'includes/nav.php';
  ?>
     <main>
-    
+     
+<p> Champlain Dining Hall features the following:</p>
 
-<header>
-    <h1>Champlain</h1>
- <h2> Champlain Menu </h2>
-</header>
-     
-     <div class="dropdown">
-  <button class="dropbtn"> Champlain Dining Hall features the following: </button>
-  <div class="dropdown-content">
-    <a href="ChamplainBreakfastMenu.pdf"> Champlain Grill & Co - All day breakfast </a>
-    <a href="ChamplainLunch&DinnerMenu.pdf">Champlain Grill & Co - Lunch & dinner</a>
-    <a href="ChamplainElDiablitoTaqueria.pdf">El Diablito Taqueria</a>
-   <a href="RevolutionNoodleMenu.pdf">Revolution Noodle</a>
-  </div>
-</div>     
-     
-<p> Champlain Dining Hall features the following:
+<ul>
+    <li><a href="Menu/ChamplainBreakfastMenu.pdf">
+        <img src="img/Grill and co.jpg" alt="Image of Grill and Co"/>
+        <p>Champlain Grill & Co - All day breakfast<p>
+        </a></li>
 
-<p> Champlain Grill & Co - All day breakfast, classic grill menu featuring 100% Canadian beef and monthly features <a href="ChamplainBreakfastMenu.pdf">Menu</a>.</p> 
+    <li> <a href="Menu/ChamplainLunch&DinnerMenu.pdf">
+            <img src="img/Grill and co.jpg" alt= "Image of Grill and Co">
+            <p>Champlain Grill & Co - Lunch & dinner</p>
+    </a></li>
 
-<p> Champlain Grill & Co - Lunch & dinner  <a href="ChamplainLunch&DinnerMenu.pdf">Menu</a>.</p>      
-    
-<p> Revolution Noodle - That familiar taste of classic Vietnamese to Japanese comfort foods. This new station delivers authentic and electric flavours using the freshest produce, authentic noodles and delicious broths <a href="RevolutionNoodleMenu.pdf">Menu</a>.</p> 
- 
-<p> El Diablito Taqueria <a href="ChamplainElDiablitoTaqueria.pdf">Menu</a>.</p>  
-     
-</p>
- 
- 
-     
-     
+    <li> <a href="RevolutionNoodleMenu.pdf">
+            <img src="img/Revolution noodle.jpg" alt= "Revolution Noodle logo">
+            <p>Revolution Noodle - That familiar taste of classic Vietnamese to Japanese comfort foods</p>
+    </a></li>
+    <li> <a href="ChamplainElDiablitoTaqueria.pdf">
+            <img src="img/El diabilito.jpg" alt= " El Diablito Taqueria logo">
+            <p>l Diablito Taqueria</p>
+    </a></li>
+
+</ul>
 
     </main>
-    
     <?php
         include 'includes/footer.php';
     ?>

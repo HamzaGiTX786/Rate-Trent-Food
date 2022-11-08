@@ -17,7 +17,7 @@
      
 <p> Lady Eaton Dining Hall features the following:</p>
 
-<ul>
+<ul class="menu">
     <li><a href="Menu/GzowskiLocalGrillMenu.pdf">
         <img src="img/Thelocalgrill.jpg" alt="Image of The local Grill Logo"/>
         <p>The Local Grill - Signature grill menu featuring local cheese & breads. Lots of unique finds!<p>

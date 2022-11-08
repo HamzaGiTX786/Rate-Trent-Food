@@ -17,7 +17,7 @@
      
 <p> Otonabee Dining Hall features the following:</p>
 
-<ul>
+<ul class="menu">
     <li><a href="Menu/OtonabeeBreakfastMenu.pdf">
         <img src="img/Grill and co.jpg" alt="Image of Grill and Co"/>
         <p>Grill & Co - All day breakfast<p>

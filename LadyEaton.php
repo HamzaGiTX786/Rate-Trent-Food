@@ -17,7 +17,7 @@
      
 <p> Lady Eaton Dining Hall features the following:</p>
 
-<ul>
+<ul class="menu">
     <li><a href="Menu/Chef'sTableBreakfastMenu.pdf">
         <img src="img/chefs table.jpg" alt="Image of chefs table logo"/>
         <p>Chef's Table Breakfast<p>

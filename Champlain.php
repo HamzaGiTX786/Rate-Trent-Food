@@ -17,7 +17,7 @@
      
 <p> Champlain Dining Hall features the following:</p>
 
-<ul>
+<ul class="menu">
     <li><a href="Menu/ChamplainBreakfastMenu.pdf">
         <img src="img/Grill House.jpg" alt="Image of Grill and Co"/>
         <p>Champlain Grill House - Until 11am<p>

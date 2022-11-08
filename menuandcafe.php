@@ -49,8 +49,27 @@ if(isset($_POST['submit']))
         include 'includes/nav.php';
  ?>
     <main>
-    <p>Welcome to Rate Trent Food. This a website where you can give a rating to a dish served in any of Trent University's Cafes from 1-5</p>
-    <form name="search" id="search" method="post" novalidate>
+
+    <ul>
+        <li>
+                <img src="img/ChamplainCollege.png" alt= "Champlain College Logo">
+                <p>Champlain College</p>
+        </li>
+        <li>
+                <img src="img/Lady Eaton Crest-Gradient.jpeg" alt= "Champlain College Logo">
+                <p>Lady Eaton College</p>
+        </li>
+        <li>
+                <img src="img/otonabee_college_logo.png" alt= "Champlain College Logo">
+                <p>Otonabee College</p>
+        </li>
+        <li>
+                <img src="img/Peter Gzowski College Loon Red Eye_0.png" alt= "Champlain College Logo">
+                <p>Peter Gzowski College</p>
+        </li>
+</ul>
+
+  <!--
      
      <div class="dropdown">
   <button class="dropbtn"> Trent College - Dining Halls </button>
@@ -58,8 +77,7 @@ if(isset($_POST['submit']))
     <a href="Champlain.php">Champlain</a>
     <a href="Gzowski.php">Gzowski</a>
     <a href="LadyEaton.php">LadyEaton</a>
-   <a href="Otonabee.php">Otonabee<
-    /a>
+   <a href="Otonabee.php">Otonabee</a>
   </div>
 </div>
      
@@ -97,37 +115,40 @@ if(isset($_POST['submit']))
      </nav>
    
 
-        <!-- Search bar -->
+         Search bar 
     <div>
         <label for="search">Search for a dish:</label>
         <input type="text" name="search" id="search" placeholder="Search" />
         <span class="error <?=!isset($errors['search']) ? 'hidden' : "";?>">Please enter item to be searched!</span>
     </div>
 
-    <!-- Button to submit -->
+     Button to submit 
 
     <div id="buttons">
     <button type="submit" name="submit">Search</button>
     </div>
     </form>
 
-    <!-- Search Results -->
+    Search Results
 
-    <!-- The result section is hidden until there is aything found -->
-    <div id="searchresult" class = "<?=!isset($food) ? 'hidden':"";?>"> 
+     The result section is hidden until there is aything found
+    <div id="searchresult" class = "<?=//!isset($food) ? 'hidden':"";?>"> 
     <h2>Search Result: </h2>
-    <?php foreach($food as $fooditem):?>
+    <?php //foreach($food as $fooditem):?>
         <ul>
-            <li>Name: <?= $fooditem?></li>
+            <li>Name: <?=// $fooditem?></li>
         </ul>
-    <?php endforeach; ?>
+    <?php //endforeach; ?>
     </div>
-
+    
+     -->
     </main>
     
     <?php
-        include 'includes/footer.php';
+        //include 'includes/footer.php';
     ?>
+
+   
     
 </body>
 </html>

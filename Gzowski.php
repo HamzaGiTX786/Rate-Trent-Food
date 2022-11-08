@@ -66,9 +66,9 @@ if(isset($_POST['submit']))
      
 <p> Gzowski Dining Hall features the following:
 
-<p> The Local Grill - Signature grill menu featuring local cheese & breads. Lots of unique finds! <a href="GzowskiLocalGrillMenu.pdf">Menu</a>.</p> 
+<p> The Local Grill - Signature grill menu featuring local cheese & breads. Lots of unique finds! <a href="Menu/GzowskiLocalGrillMenu.pdf">Menu</a>.</p> 
     
-<p> Parea - Offering Mediterranean selections, including a wide variety of pastas, naanzas, salads & wraps & baked sandwiches <a href="PereaMediterraneanMenu.pdf">Menu</a>.</p> 
+<p> Parea - Offering Mediterranean selections, including a wide variety of pastas, naanzas, salads & wraps & baked sandwiches <a href="Menu/PereaMediterraneanMenu.pdf">Menu</a>.</p> 
      
 </p>
 

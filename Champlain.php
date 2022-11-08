@@ -63,11 +63,11 @@ if(isset($_POST['submit']))
             <p>Champlain Grill & Co - Lunch & dinner</p>
     </a></li>
 
-    <li> <a href="RevolutionNoodleMenu.pdf">
+    <li> <a href="Menu/RevolutionNoodleMenu.pdf">
             <img src="img/Revolution noodle.jpg" alt= "Revolution Noodle logo">
             <p>Revolution Noodle - That familiar taste of classic Vietnamese to Japanese comfort foods</p>
     </a></li>
-    <li> <a href="ChamplainElDiablitoTaqueria.pdf">
+    <li> <a href="Menu/ChamplainElDiablitoTaqueria.pdf">
             <img src="img/El diabilito.jpg" alt= " El Diablito Taqueria logo">
             <p>l Diablito Taqueria</p>
     </a></li>

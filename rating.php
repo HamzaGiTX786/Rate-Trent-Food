@@ -40,8 +40,6 @@ if(count($errors) === 0) //check if there are any errors
         $result_comments = mysqli_stmt_get_result($stmt);
         $comments = mysqli_fetch_all($result_comments);
 
-        var_dump($comments);
-
         foreach($comments as $comment):
             $query = "SELECT fname,lname FROM Users WHERE userId=?";
             $stmt = mysqli_stmt_init($conn);
@@ -73,6 +71,7 @@ if(count($errors) === 0) //check if there are any errors
     <title>Rating:<?= $itemname;?></title>
     <link rel="stylesheet" href="styles/master.css"/>
     <link rel="stylesheet" href="styles/ratestyles.css" />
+    <script defer src="scripts/master.js"></script>
 </head>
 <body>
 <?php
@@ -84,7 +83,7 @@ if(count($errors) === 0) //check if there are any errors
         <h2><?= $itemname;?></h2>
             <div class="wrapper">
                 <div class="item1"></div>
-                <div id="rank"><?= $rank;?> / 5</div>
+                <div id="rank" class="rating"><?= $rank;?> / 5</div>
                 <div>
                     Comments:
                     <?php foreach($comments as $comment):

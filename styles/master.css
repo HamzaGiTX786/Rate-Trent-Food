@@ -60,7 +60,7 @@ nav ul a, nav ul a:visited {
 
 nav ul a:hover, nav ul a:visited:hover, main ul li a:hover {
     background: var(--light);
-    border-radius: 0.3em;
+    border-radius: 0.3em;   
     text-shadow: 0px 0px 0px;
     color: #fff;
 }

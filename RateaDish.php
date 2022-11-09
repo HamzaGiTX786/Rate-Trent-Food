@@ -1,7 +1,7 @@
 <?php
    session_start();
    
-   if(!isset($_SESSION['user']))
+   if(!isset($_SESSION['user']) || !isset($_SESSION['id']))
    {
        header("Location:login.php");
        exit();
@@ -14,6 +14,8 @@
    $rating = $_POST['rating'] ??  null;
    $review = $_POST['review'] ?? null;
    $selectedDish = $_POST['dish'] ?? null;
+   $userid =  $_SESSION['id'];
+   $total = 0;
    
    
    $query = "SELECT * FROM fooditems ORDER BY itemname ASC"; //change it to fooditem database 
@@ -35,31 +37,72 @@
        {
            $errors['ratings'] = true;
        }
-   
-       
-   
-      
        
        // add the rating to the rating database
        if(count($errors) === 0)
        {   
-           $query = "INSERT INTO userratings (userID, itemID, rating, review) values (null,?,?,?)";
+           $query = "INSERT INTO userratings (userID, itemID, rating, review) values (?,?,?,?)";
            $stmt = mysqli_stmt_init($conn);
            if(!mysqli_stmt_prepare($stmt,$query))
            {
                echo "SQL prepare failed";
            }
            else{
-               mysqli_stmt_bind_param($stmt,"sss", $selectedDish,$rating,$review,);
+               mysqli_stmt_bind_param($stmt,"ssss",$_SESSION['id'],$selectedDish,$rating,$review);
                mysqli_stmt_execute($stmt);
+
+
+               $query = "SELECT COUNT(itemid) FROM userratings WHERE itemID = ?";
+               $stmt = mysqli_stmt_init($conn);
+               if(!mysqli_stmt_prepare($stmt,$query))
+               {
+                  echo "SQL prepare failed";
+               }
+               else{
+                  mysqli_stmt_bind_param($stmt,"s", $selectedDish);
+                  mysqli_stmt_execute($stmt);
+                  $result = mysqli_stmt_get_result($stmt);
+                  $count_number = mysqli_fetch_assoc($result);
+
+                  $query = "SELECT rating FROM userratings WHERE itemID = ?";
+                  $stmt = mysqli_stmt_init($conn);
+                  if(!mysqli_stmt_prepare($stmt,$query))
+                  {
+                     echo "SQL prepare failed";
+                  }
+                  else{
+                     mysqli_stmt_bind_param($stmt,"s", $selectedDish);
+                     mysqli_stmt_execute($stmt);
+                     $result_rating = mysqli_stmt_get_result($stmt);
+                     $rating_number = mysqli_fetch_all($result_rating);
+
+
+                     foreach($rating_number as $i):
+                        $total += $i[0];
+                     endforeach;
+
+                    $final_rating = $total/$count_number['COUNT(itemid)'];
+                     $final_rating = round($final_rating);
+
+                     $query = "UPDATE fooditems SET rank = ? WHERE itemid = ?";
+                     $stmt = mysqli_stmt_init($conn);
+                     if(!mysqli_stmt_prepare($stmt,$query))
+                     {
+                         echo "SQL prepare failed";
+                     }
+                     else{
+                         mysqli_stmt_bind_param($stmt,"ss",$final_rating,$selectedDish);
+                         mysqli_stmt_execute($stmt);
               
-               header("Location: menuandcafe.php");
-               exit();
+                 header("Location: menuandcafe.php");
+                 exit();
                
            }
        }
    }
-   
+}
+   }
+}
    ?> 
 <!DOCTYPE html>
 <html lang="en">

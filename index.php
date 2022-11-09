@@ -15,7 +15,7 @@ if(isset($_POST['submit']))
     if(count($errors) === 0) //check if there are any errors
     {
         $searchquery = "%$search%";
-        $query = "SELECT itemname FROM fooditems WHERE itemname LIKE ? ";
+        $query = "SELECT itemname,itemid FROM fooditems WHERE itemname LIKE ? ";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt,$query))
         {
@@ -25,7 +25,7 @@ if(isset($_POST['submit']))
             mysqli_stmt_bind_param($stmt,"s",$searchquery);
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
-            $food = mysqli_fetch_assoc($result); // get output for the searched item
+            $food = mysqli_fetch_all($result); // get output for the searched item
     }
 }
 }
@@ -68,12 +68,12 @@ if(isset($_POST['submit']))
 
     <!-- Search Results -->
 
-    <!-- The result section is hidden until there is aything found -->
+    <!-- The result section is hidden until there is anything found -->
     <div id="searchresult" class = "<?=!isset($food) ? 'hidden':"";?>"> 
     <h2>Search Result: </h2>
     <?php foreach($food as $fooditem):?>
         <ul>
-            <li>Name: <?= $fooditem?></li>
+            <li><a title="View rating" href="rating.php?item=<?= $fooditem[1];?>">Name: <?= $fooditem[0]?></a></li>
         </ul>
     <?php endforeach; ?>
     </div>

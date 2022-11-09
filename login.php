@@ -34,7 +34,7 @@ if (isset($_POST['submit']))
         {
             session_start(); //start the session
             $_SESSION['user'] = $row['username']; //load session credentials
-            $_SESSION['id'] = $row['userid'];
+            $_SESSION['id'] = $row['userId'];
 
             if(!empty($_POST["remember"])) // if remeber was checked
             {

@@ -16,7 +16,7 @@
     <main>
         <p> College with Dining Halls in Trent University</p>
 
-    <ul>
+        <ul class="menu">
        <li> <a href="Champlain.php">
                 <img src="img/ChamplainCollege.png" alt= "Champlain College Logo">
                 <p>Champlain College</p>

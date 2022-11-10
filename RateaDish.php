@@ -94,7 +94,7 @@
                          mysqli_stmt_bind_param($stmt,"ss",$final_rating,$selectedDish);
                          mysqli_stmt_execute($stmt);
               
-                 header("Location: menuandcafe.php");
+                 header("Location: menuandcafe");
                  exit();
                
            }

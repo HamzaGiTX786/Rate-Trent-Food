@@ -2,6 +2,8 @@
 
 window.addEventListener("DOMContentLoaded", () => {
 
+
+// function that takes in a rank and converts that into number of stars 
 function manystars(star){
 
     const rank = document.getElementById("rank");
@@ -217,9 +219,9 @@ function manystars(star){
 
 
 
-    }
+    }// end of switch
 
-}
+} // end of dunction manystars
 
 const rank = document.getElementById("rank");
 

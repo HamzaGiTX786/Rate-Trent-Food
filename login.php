@@ -47,7 +47,12 @@ if (isset($_POST['submit']))
                 }
             }
 
+            if(isset($_SESSION['rateaDish'] ))
+            {
+                header("Location: RateaDish"); //redirect to the homepage
+            }else{
             header("Location: index"); //redirect to the homepage
+            }
         }
         else
         {

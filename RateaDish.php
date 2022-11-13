@@ -1,8 +1,10 @@
 <?php
    session_start();
+
    
    if(!isset($_SESSION['user']) || !isset($_SESSION['id']))
    {
+       $_SESSION['rateaDish'] = "RateaDish";
        header("Location:login.php");
        exit();
    }
@@ -94,7 +96,7 @@
                          mysqli_stmt_bind_param($stmt,"ss",$final_rating,$selectedDish);
                          mysqli_stmt_execute($stmt);
               
-                 header("Location: menuandcafe");
+                 header("Location: rating?item=$selectedDish");
                  exit();
                
            }

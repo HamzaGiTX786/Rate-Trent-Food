@@ -9,7 +9,7 @@
 
 /* Print the errors in red*/
 .error{
-    color: red;
+    color: yellow;
 }
 
 body{
@@ -143,6 +143,15 @@ input {
     border: none;
     border-bottom: 0.2em solid #ddd;
     background-color: whitesmoke;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+input#build_image{
+    position:relative;
+    border: none;
+    border-bottom: 0.2em solid #B15533;
+    background-color: #B15533;
     padding: 1em;
     border-radius: 0.5em;
 }

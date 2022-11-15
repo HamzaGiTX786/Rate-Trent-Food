@@ -82,7 +82,7 @@ if (isset($_POST['submit']))
                     <input type="text" id="empID" name="empID" autocomplete="new-password"  placeholder="Enter your Employee number here" size="40"/>
                 </div>
                 <div>
-                    <span class="error <?=!isset($errors['login']) ? 'hidden' : "";?>"> Your last name or Employee number was invalid</span>
+                    <span class="error <?=!isset($errors['login']) ? 'hidden' : "";?>"> Your last name or Employee number was invalid!</span>
                 </div>
                 <div>
                     <label for="remember">Remember me</label>

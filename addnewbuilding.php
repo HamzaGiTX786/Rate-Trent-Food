@@ -74,22 +74,16 @@ if (isset($_POST['submit'])) {
         else{
             mysqli_stmt_bind_param($stmt,"sss",$build_name,$build_code,$filename);
             mysqli_stmt_execute($stmt);
-
-            echo "Data base texxt";
-            var_dump($_FILES);
-            //die();
-
+            
             if(move_uploaded_file($tempname,$folder.$filename))
             {
-               // header("Location: menuandcafe");
-               echo " Test passed";
+               header("Location: menuandcafe");
                 exit();
             }
             else{
                 echo "Image upload error";
                 die();
             }
-
             
         }
     }

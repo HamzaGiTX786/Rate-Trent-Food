@@ -1,6 +1,12 @@
 <?php
-
 include 'includes/library.php'; 
+session_start();
+   
+if(!isset($_SESSION['lname']) || !isset($_SESSION['empid']))
+{
+    header("Location:backend");
+    exit();
+}
 
 $query = "SELECT * FROM Buildings"; //change it to fooditem database 
    $stmt = mysqli_stmt_init($conn);

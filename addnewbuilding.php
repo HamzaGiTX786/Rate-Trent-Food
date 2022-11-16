@@ -1,6 +1,14 @@
 <?php
 include 'includes/library.php';
 
+session_start();
+   
+if(!isset($_SESSION['lname']) || !isset($_SESSION['empid']))
+{
+    header("Location:backend");
+    exit();
+}
+
 $build_name = $_POST['build_name']?? null;
 $build_code = $_POST['build_code']?? null;
 

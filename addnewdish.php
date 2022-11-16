@@ -17,6 +17,63 @@ $query = "SELECT * FROM Buildings"; //change it to fooditem database
  
 $errors = array();
 
+$dish_name = $_POST['dish_name'] ?? null;
+$dish_price = $_POST['dish_price'] ?? null;
+$dish_cal = $_POST['dish_cal'] ?? null;
+$building = $_POST['build'] ?? null;
+$cafe = $_POST['cafe'] ?? null;
+$rank = 0;
+
+if(isset($_POST['submit']))
+{
+     //validate user has entered a first name
+     if (!isset($dish_name) || strlen($dish_name) === 0) 
+     {
+         $errors['dish_name'] = true;
+     }
+     
+     //validate user has entered a last name
+     if (!isset($dish_price) || strlen($dish_price) === 0) 
+     {
+         $errors['dish_price'] = true;
+     }
+     
+      //validate user has entered a last name
+      if (!isset($dish_cal) || strlen($dish_cal) === 0) 
+      {
+          $errors['dish_cal'] = true;
+      }
+ 
+     //validate user has entered a major
+     if (!isset($building) || strlen($building) === 0)
+     {
+         $errors['building'] = true;
+     }
+
+     //validate user has entered a major
+     if (!isset($cafe) || strlen($cafe) === 0)
+     {
+         $errors['cafe'] = true;
+     }
+
+     if(count($errors) === 0)
+     {
+            $query = "INSERT INTO fooditems values (NULL,?,?,?,?,?,?)";
+            $stmt = mysqli_stmt_init($conn);
+        if(!mysqli_stmt_prepare($stmt,$query))
+        {
+            echo "SQL prepare failed";
+        }
+        else{
+            mysqli_stmt_bind_param($stmt,"ssssss",$dish_name,$dish_price,$dish_cal,$cafe,$building,$rank);
+            mysqli_stmt_execute($stmt);
+
+            header("Location: menuandcafe");
+            exit();
+        }
+     }
+}
+
 
 
 ?>
@@ -69,7 +126,7 @@ $errors = array();
                                 <option value="<?= $build[0]?>"><?= $build[0]?></option>
                                 <?php endforeach;?>
                             </select>
-                        <span class="error <?=!isset($errors['dish_cal']) ? 'hidden' : "";?>">Please choose a buidling</span>
+                        <span class="error <?=!isset($errors['building']) ? 'hidden' : "";?>">Please choose a buidling</span>
                     </div>
 
                     <div class="hidden">
@@ -77,7 +134,7 @@ $errors = array();
                         <select name="cafe" id="cafe">
                             <option value="0">Select a cafe</option> 
                             </select>
-                        <span class="error <?=!isset($errors['dish_cal']) ? 'hidden' : "";?>">Please choose a cafe to add the dish</span>
+                        <span class="error <?=!isset($errors['cafe']) ? 'hidden' : "";?>">Please choose a cafe to add the dish</span>
                     </div>
 
                     <div id="buttons">    

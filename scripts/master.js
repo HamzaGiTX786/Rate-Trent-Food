@@ -233,9 +233,10 @@ function addcafes(name_of_build){
     {
         let cafeoption = document.getElementById("cafe");
 
-        cafeoption.childNodes.forEach(element => {
-            element.remove();
-        });
+        var i, L = cafeoption.options.length - 1;
+        for(i = L; i >= 1; i--) {
+            cafeoption.remove(i);
+            }
 
         var cafe1 = document.createElement("option");
         cafe1.setAttribute("value","Grill House Breakfast");
@@ -268,9 +269,10 @@ function addcafes(name_of_build){
     {
         let cafeoption = document.getElementById("cafe");
 
-        cafeoption.childNodes.forEach(element => {
-            element.remove();
-        });
+        var i, L = cafeoption.options.length - 1;
+        for(i = L; i >= 1; i--) {
+            cafeoption.remove(i);
+            }
 
         var cafe1 = document.createElement("option");
         cafe1.setAttribute("value","The Local Grill");
@@ -291,10 +293,11 @@ function addcafes(name_of_build){
     {
         let cafeoption = document.getElementById("cafe");
 
-        cafeoption.childNodes.forEach(element => {
-            element.remove();
-        });
-
+        var i, L = cafeoption.options.length - 1;
+        for(i = L; i >= 1; i--) {
+            cafeoption.remove(i);
+            }
+           
         var cafe1 = document.createElement("option");
         cafe1.setAttribute("value","Chef's Table Breakfast");
         cafe1.setAttribute("id","cafe_option");
@@ -326,9 +329,10 @@ function addcafes(name_of_build){
     {
         let cafeoption = document.getElementById("cafe");
 
-        cafeoption.childNodes.forEach(element => {
-            element.remove();
-        });
+        var i, L = cafeoption.options.length - 1;
+        for(i = L; i >= 1; i--) {
+            cafeoption.remove(i);
+            }
 
         var cafe1 = document.createElement("option");
         cafe1.setAttribute("value","Grill & Co Breakfast");

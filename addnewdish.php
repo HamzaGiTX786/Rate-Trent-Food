@@ -51,13 +51,13 @@ if(isset($_POST['submit']))
       }
  
      //validate user has entered a major
-     if (!isset($building) || strlen($building) === 0)
+     if (!isset($building) || strlen($building) === 0 || $building == 0)
      {
          $errors['building'] = true;
      }
 
      //validate user has entered a major
-     if (!isset($cafe) || strlen($cafe) === 0)
+     if (!isset($cafe) || strlen($cafe) === 0 || $cafe == 0)
      {
          $errors['cafe'] = true;
      }
@@ -129,7 +129,7 @@ if(isset($_POST['submit']))
                         <select name="build" id="build">
                         <option value="0">Select a building</option>
                             <?php foreach($getbuidling as $build):?>
-                                <option value="<?= $build[0]?>"><?= $build[0]?></option>
+                                <option value="<?= $build[0]?>"><?= $build[0];?></option>
                                 <?php endforeach;?>
                             </select>
                         <span class="error <?=!isset($errors['building']) ? 'hidden' : "";?>">Please choose a buidling</span>

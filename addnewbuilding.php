@@ -107,7 +107,7 @@ if (isset($_POST['submit'])) {
         include 'includes/nav.php';
     ?>
     <main>
-        <h2> Create Account </h2>
+        <h2> Add new Building affiliated Trent University</h2>
                 <form id="create" name="create" method="post" enctype="multipart/form-data"  novalidate>
 
                     <!-- buidling name input -->
@@ -119,14 +119,14 @@ if (isset($_POST['submit'])) {
 
                       <!-- buidling code input -->
                     <div>
-                        <label for="build_code">Buidling Code</label>
+                        <label for="build_code">Building Code</label>
                         <input type="text" name="build_code" id="build_code" placeholder="Enter the buidling code here" value="" required />
                         <span class="error <?=!isset($errors['build_code']) ? 'hidden' : "";?>">Please enter a building code name</span>
                     </div>
 
                      <!-- buidling image input -->
                      <div>
-                        <label for="build_image">Buidling Image</label>
+                        <label for="build_image">Building Image</label>
                         <input type="file" name="build_image" id="build_image" placeholder="Enter a picture of the building here" required />
                         <span class="error <?=!isset($errors['build_image']) ? 'hidden' : "";?>">Please upload an image of the building</span>
                     </div>

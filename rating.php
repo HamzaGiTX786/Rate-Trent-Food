@@ -68,7 +68,7 @@ if(count($errors) === 0) //check if there are any errors
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta item="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rating:<?= $itemname;?></title>
+    <title>Rate Trent Food: Dish Rating</title>
     <link rel="stylesheet" href="styles/master.css"/>
     <link rel="stylesheet" href="styles/ratestyles.css" />
     <script defer src="scripts/master.js"></script>

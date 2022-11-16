@@ -221,11 +221,159 @@ function manystars(star){
 
     }// end of switch
 
-} // end of dunction manystars
+} // end of function manystars
 
+function addcafes(name_of_build){
+
+    let rm = document.querySelectorAll("div");
+
+    rm[4].removeAttribute("class");
+
+    if(name_of_build == "Champlain College")
+    {
+        let cafeoption = document.getElementById("cafe");
+
+        cafeoption.childNodes.forEach(element => {
+            element.remove();
+        });
+
+        var cafe1 = document.createElement("option");
+        cafe1.setAttribute("value","Grill House Breakfast");
+        cafe1.setAttribute("id","cafe_option");
+        cafe1.innerHTML = "Grill House Breakfast";
+
+        var cafe2 = document.createElement("option");
+        cafe2.setAttribute("value","Grill House Lunch & Dinner");
+        cafe2.setAttribute("id","cafe_option");
+        cafe2.innerHTML = "Grill House Lunch & Dinner";
+
+        var cafe3 = document.createElement("option");
+        cafe3.setAttribute("value","Revolution Noodle");
+        cafe3.setAttribute("id","cafe_option");
+        cafe3.innerHTML = "Revolution Noodle";
+
+        var cafe4 = document.createElement("option");
+        cafe4.setAttribute("value","El diablito Taqueria");
+        cafe4.setAttribute("id","cafe_option");
+        cafe4.innerHTML = "El diablito Taqueria";
+
+
+        cafeoption.insertAdjacentElement('beforeend',cafe1);
+        cafeoption.insertAdjacentElement('beforeend',cafe2);
+        cafeoption.insertAdjacentElement('beforeend',cafe3);
+        cafeoption.insertAdjacentElement('beforeend',cafe4);
+    }
+
+    if(name_of_build == "Gzowski College")
+    {
+        let cafeoption = document.getElementById("cafe");
+
+        cafeoption.childNodes.forEach(element => {
+            element.remove();
+        });
+
+        var cafe1 = document.createElement("option");
+        cafe1.setAttribute("value","The Local Grill");
+        cafe1.setAttribute("id","cafe_option");
+        cafe1.innerHTML = "The Local Grill";
+
+        var cafe2 = document.createElement("option");
+        cafe2.setAttribute("value","Parea");
+        cafe2.setAttribute("id","cafe_option");
+        cafe2.innerHTML = "Parea";
+
+
+        cafeoption.insertAdjacentElement('beforeend',cafe1);
+        cafeoption.insertAdjacentElement('beforeend',cafe2);
+    }
+
+    if(name_of_build == "Lady Eaton College")
+    {
+        let cafeoption = document.getElementById("cafe");
+
+        cafeoption.childNodes.forEach(element => {
+            element.remove();
+        });
+
+        var cafe1 = document.createElement("option");
+        cafe1.setAttribute("value","Chef's Table Breakfast");
+        cafe1.setAttribute("id","cafe_option");
+        cafe1.innerHTML = "Chef's Table Breakfast";
+
+        var cafe2 = document.createElement("option");
+        cafe2.setAttribute("value","Chef's Table Lunch & Dinner");
+        cafe2.setAttribute("id","cafe_option");
+        cafe2.innerHTML = "Chef's Table Lunch & Dinner";
+
+        var cafe3 = document.createElement("option");
+        cafe3.setAttribute("value","Chop'd & Wrap'd");
+        cafe3.setAttribute("id","cafe_option");
+        cafe3.innerHTML = "Chop'd & Wrap'd";
+
+        var cafe4 = document.createElement("option");
+        cafe4.setAttribute("value","San Marzano");
+        cafe4.setAttribute("id","cafe_option");
+        cafe4.innerHTML = "San Marzano";
+
+
+        cafeoption.insertAdjacentElement('beforeend',cafe1);
+        cafeoption.insertAdjacentElement('beforeend',cafe2);
+        cafeoption.insertAdjacentElement('beforeend',cafe3);
+        cafeoption.insertAdjacentElement('beforeend',cafe4);
+    }
+
+    if(name_of_build == "Otonabee College")
+    {
+        let cafeoption = document.getElementById("cafe");
+
+        cafeoption.childNodes.forEach(element => {
+            element.remove();
+        });
+
+        var cafe1 = document.createElement("option");
+        cafe1.setAttribute("value","Grill & Co Breakfast");
+        cafe1.setAttribute("id","cafe_option");
+        cafe1.innerHTML = "Grill & Co Breakfast";
+
+        var cafe2 = document.createElement("option");
+        cafe2.setAttribute("value","Grill & Co Lunch & Dinner");
+        cafe2.setAttribute("id","cafe_option");
+        cafe2.innerHTML = "Grill & Co  Lunch & Dinner";
+
+        var cafe3 = document.createElement("option");
+        cafe3.setAttribute("value","Pizza Pizza");
+        cafe3.setAttribute("id","cafe_option");
+        cafe3.innerHTML = "Pizza Pizza";
+
+        var cafe4 = document.createElement("option");
+        cafe4.setAttribute("value","Subway");
+        cafe4.setAttribute("id","cafe_option");
+        cafe4.innerHTML = "Subway";
+
+
+        cafeoption.insertAdjacentElement('beforeend',cafe1);
+        cafeoption.insertAdjacentElement('beforeend',cafe2);
+        cafeoption.insertAdjacentElement('beforeend',cafe3);
+        cafeoption.insertAdjacentElement('beforeend',cafe4);
+    }
+
+}
+
+
+if(document.title == "Rate Trent Food: Dish Rating"){
 const rank = document.getElementById("rank");
 
 let num_of_star = rank.innerText.charAt(0);
 
 manystars(num_of_star);
+}// end of if title check for rating
+
+if(document.title == "Rate Trent Food: Add new dish‐ Backend"){
+    
+const building = document.getElementById("build");
+
+building.addEventListener("focusout",()=>{
+    addcafes(building.value);
+})// dropdown event listener for buidlings
+}
 })

@@ -15,7 +15,7 @@ if(isset($_POST['submit']))
     if(count($errors) === 0) //check if there are any errors
     {
         $searchquery = "%$search%";
-        $query = "SELECT itemname,itemid FROM fooditems WHERE itemname LIKE ? ";
+        $query = "SELECT itemname,itemid,cafe,building FROM fooditems WHERE itemname LIKE ? ";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt,$query))
         {
@@ -73,7 +73,7 @@ if(isset($_POST['submit']))
     <h2>Search Result: </h2>
     <?php foreach($food as $fooditem):?>
         <ul>
-            <li><a title="View rating" href="rating.php?item=<?= $fooditem[1];?>">Name: <?= $fooditem[0]?></a></li>
+            <li><a title="View rating" href="rating.php?item=<?= $fooditem[1];?>">Name: <?= $fooditem[0]?> - <?= $fooditem[2] ?>  - <?= $fooditem[3]?></a></li>
         </ul>
     <?php endforeach; ?>
     </div>

@@ -11,7 +11,7 @@ $itemid = $_GET['item'] ?? null;
 
 if(count($errors) === 0) //check if there are any errors
 {
-    $query = "SELECT itemname,rank FROM fooditems WHERE itemid=?; ";
+    $query = "SELECT itemname,rank,cafe,building FROM fooditems WHERE itemid=?; ";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$query))
     {
@@ -25,6 +25,8 @@ if(count($errors) === 0) //check if there are any errors
 
         $itemname = $rating['itemname'];
         $rank = $rating['rank'];
+        $cafe = $rating['cafe'];
+        $build = $rating['building'];
         }
 
     $query1 = "SELECT review,userID FROM userratings WHERE itemID=?";
@@ -80,7 +82,7 @@ if(count($errors) === 0) //check if there are any errors
  ?>
 
     <main>
-        <h2><?= $itemname;?></h2>
+        <h2><?= $itemname;?> - <?= $cafe?> - <?= $build?></h2>
             <div class="wrapper">
                 <div class="item1"></div>
                 <div id="rank" class="rating"><?= $rank;?> / 5</div>

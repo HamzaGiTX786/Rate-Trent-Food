@@ -20,7 +20,7 @@ body{
     background-image: linear-gradient(to left bottom, #154734, #17564f, #266469, #3e7281, #5b7f95);
     font-family: 'Comfortaa', cursive;
     font-weight: 500;
-
+    
 }
 
 h1{
@@ -69,7 +69,7 @@ nav ul a:hover, nav ul a:visited:hover, main ul li a:hover {
 main {
     background: #B15533;
     width: 75%;
-    margin: 7em auto;
+    margin: 10.8em auto;
     margin-top: 4em;
     padding: 4em;
     border-radius: 2em;

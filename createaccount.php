@@ -205,7 +205,7 @@ if (isset($_POST['submit']))
                     <!-- Confirming Terms and Conditions -->
                     <div id="checkbox">
                     <input type="checkbox" name="agree" id="agree" value="Y" required />
-                    <label for="agree">I have read and accepted the <a href="termsandconditions.html">Terms and Conditions</a>
+                    <label for="agree">I have read and accepted the <a href="termsandconditions.php">Terms and Conditions</a>
                     </label>
                     <span class="error <?=!isset($errors['agree']) ? 'hidden' : "";?>">You must agree to the terms</span>
                     </div>

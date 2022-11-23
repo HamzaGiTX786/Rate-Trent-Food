@@ -9,7 +9,7 @@
 
 /* Print the errors in red*/
 .error{
-    color: yellow;
+    color: rgb(192, 181, 97);
     padding: .5em;
 }
 

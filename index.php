@@ -15,7 +15,7 @@ if(isset($_POST['submit']))
     if(count($errors) === 0) //check if there are any errors
     {
         $searchquery = "%$search%";
-        $query = "SELECT itemname,itemid,cafe,building FROM fooditems WHERE itemname LIKE ? ";
+        $query = "SELECT itemname,itemid,cafe,building FROM fooditems WHERE itemname LIKE ?  ORDER BY itemname ASC";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt,$query))
         {

@@ -74,11 +74,11 @@ if (isset($_POST['submit']))
             <h2>LOGIN</h2>
              <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF']?>" >
                 <div>
-                     <label for="lname">lname:</label> 
+                     <label for="lname">Last name:</label> 
                      <input type="text" id="lname" name="lname" size="40" autocomplete="new-password" placeholder="Enter your last name here" value="<?php if(isset($_COOKIE["lname"])) { echo $_COOKIE["lname"]; }?>"/>
                 </div>
                 <div>
-                    <label for="empID">Password</label> 
+                    <label for="empID">Employee ID</label> 
                     <input type="text" id="empID" name="empID" autocomplete="new-password"  placeholder="Enter your Employee number here" size="40"/>
                 </div>
                 <div>

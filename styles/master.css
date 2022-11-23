@@ -20,7 +20,6 @@ body{
     background-image: linear-gradient(to left bottom, #154734, #17564f, #266469, #3e7281, #5b7f95);
     font-family: 'Comfortaa', cursive;
     font-weight: 500;
-    
 }
 
 h1{
@@ -218,4 +217,53 @@ main ul li{
     padding: 1em;
 }
 
+div.container#slideshow{
+    width: 600px;
+    overflow: hidden;
+    display: flex;
+    padding-top: 2.5em ;
+    margin-left: 25em;
+}
+
+div.wrapper#slideshow{
+    width:100%;
+    display: flex;
+    animation: slide 10s infinite linear;
+    
+}
+
+#slideshow a:nth-child(1){
+    width: 100%;
+    padding-right: 10em;
+    padding-left: 10em;
+    margin: 0;
+}
+#slideshow a:nth-child(2){
+    width: 100%;
+    padding-right:15em;
+    margin:0;
+}
+#slideshow a:nth-child(3){
+    width: 100%;
+    padding-right:20em;
+    margin:0;
+}
+#slideshow a:nth-child(4){
+    width: 100%;
+    padding-left: 10em;
+    margin:0;
+}
+
+@keyframes slide {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(0);}
+    30% {transform: translateX(-100%);}
+    50% {transform: translateX(-100%);}
+    55% {transform: translateX(-250%);}
+    75% {transform: translateX(-250%);}
+    80% {transform: translateX(-400%);}
+    100% {transform: translateX(-400%);}
+
+    
+}
 

@@ -50,11 +50,25 @@ if(isset($_POST['submit']))
  ?>
     <main>
     <p>Welcome to Rate Trent Food. This a website where you can give a rating to a dish served in any of Trent University's Cafes from 1-5</p>
+    <div class="container" id="slideshow">
+        <div class="wrapper" id="slideshow">
+        
+        <a href="rating.php?item=107" title="Love me Tenders - Grill & co - Otonabee"><img src="img/LoveMeTenders.png" alt="Image of chicken tenders in a Grill & co. cup"></a>
+
+        <a href="rating.php?item=38" title="Beef Pho Bowl - Revolution Noodles - Champlain"><img src="img/pho.jpg" alt="Image of pho in a black bowl"></a>
+
+        <a href="rating.php?item=123" title="XL 16inch Classic Pizza - Pizza Pizza - Otonabee"><img src="img/Pizza Pizza slideshow.jpg" alt="Image of Pizza on a garden bench"></a>
+
+        <a href="rating.php?item=111" title="Poutine - Grill & co. - Otonabee"><img src="img/Poutine.png" alt="Image of Poutine in a Grill and co. cup"></a>
+    
+    </div>
+</div>
+
     <form name="search" id="search" method="post" novalidate>
 
         <!-- Search bar -->
     <div>
-        <label for="search">Search for a dish:</label>
+        <label for="search">Search for a dish:</label> 
         <input type="text" name="search" id="search" placeholder="Search" />
         <span class="error <?=!isset($errors['search']) ? 'hidden' : "";?>">Please enter item to be searched!</span>
     </div>

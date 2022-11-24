@@ -85,11 +85,12 @@ if(isset($_POST['submit']))
     <!-- The result section is hidden until there is anything found -->
     <div id="searchresult" class = "<?=!isset($food) ? 'hidden':"";?>"> 
     <h2>Search Result: </h2>
-    <?php foreach($food as $fooditem):?>
         <ul>
+        <?php foreach($food as $fooditem):?>
             <li><a title="View rating" href="rating.php?item=<?= $fooditem[1];?>">Name: <?= $fooditem[0]?> - <?= $fooditem[2] ?>  - <?= $fooditem[3]?></a></li>
+            <?php endforeach; ?>
         </ul>
-    <?php endforeach; ?>
+    
     </div>
 
     </main>

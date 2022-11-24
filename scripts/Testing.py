@@ -41,5 +41,29 @@ def create_account_test():
         print("Test Failed")
 
 
-create_account_test()  # test to check if the login page works
-login_test()  # test to check if login page works
+def search():
+     driver = webdriver.Chrome("D:\\Hamza\\Trent university\\4th Year\\Fall\\COIS 3850H\\Rate-Trent-Food\\scripts\\WebDrivers\\chromedriver.exe")
+     driver.get("https://loki.trentu.ca/~hamzasalimattarwala/3850/index.php")
+     time.sleep(2)
+     driver.find_element("tag name","input").send_keys("1")
+     driver.find_element("name", "submit").click()
+     time.sleep(5)
+     driver.find_element("partial link text", "1 lb").click()
+
+     time.sleep(2)
+
+     title = driver.title
+
+     if title == "Rate Trent Food: Dish Rating":
+        print("Test Passed")
+     else:
+        print("Test Failed")
+
+
+
+#create_account_test()  # test to check if the login page works
+#login_test()  # test to check if login page works
+#search()
+
+
+

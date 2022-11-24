@@ -7,6 +7,7 @@
    }
    
    $errors = array();
+   $user = array();
    $itemid = $_GET['item'] ?? null;
    
    if(count($errors) === 0) //check if there are any errors
@@ -54,11 +55,11 @@
                mysqli_stmt_execute($stmt);
                $result = mysqli_stmt_get_result($stmt);
                $name = mysqli_fetch_all($result); // get output for the searched item
+               foreach($name as $n):
+                  array_push($user,$n);
+               endforeach;
                }
            endforeach;
-   
-          //var_dump($name);
-   
    }
    
    
@@ -101,17 +102,16 @@
        
             <div class="list-group">
                 Reviews:
-               <?php foreach($comments as $comment):
-                  foreach($name as $user):?>
+               <?php for($i=0; $i <count($comments); $i++){
+                  ?>
                <a href="#" class="list-group-item list-group-item-action">
                   <div class="d-flex w-100 justify-content-between">
-                     <h5 class="mb-1"><?php echo $user[0]." ".$user[1]." - ".$comment[2]."/5"?></h5>
+                     <h5 class="mb-1"><?php echo $user[$i][0]." ".$user[$i][1]." - ".$comments[$i][2]."/5"?></h5>
                   </div>
-                  <p class="mb-1"><?php echo $comment[0];?></p>
+                  <p class="mb-1"><?php echo $comments[$i][0];?></p>
                </a>
                <?php 
-                  endforeach; 
-                  endforeach;
+               }
                   ?>
             </div>
          </form>

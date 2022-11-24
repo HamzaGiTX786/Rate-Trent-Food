@@ -60,9 +60,33 @@ def search():
         print("Test Failed")
 
 
+def rateadish():
+    driver = webdriver.Chrome("D:\\Hamza\\Trent university\\4th Year\\Fall\\COIS 3850H\\Rate-Trent-Food\\scripts\\WebDrivers\\chromedriver.exe")
+    driver.get("https://loki.trentu.ca/~hamzasalimattarwala/3850/RateaDish.php")
+    driver.find_element("id", "username").send_keys("test")
+    driver.find_element("id", "password").send_keys("admintest000")
+    driver.find_element("name", "submit").click()
+    driver.find_element("name","dish").send_keys("1")
+    driver.find_elements("css selector", "label")[3].click()
+    time.sleep(10)
+    driver.find_element("tag name", "textarea").send_keys("Average")
+
+    time.sleep(2)
+
+    driver.find_element("name", "submit").click()
+
+    title = driver.title
+
+    if title == "Rate Trent Food: Dish Rating":
+        print("Test Passed")
+    else:
+        print("Test Failed")
+
+
 #create_account_test()  # test to check if the login page works
 #login_test()  # test to check if login page works
-#search()
+#search() #  test to check if the search does redirect to testing page
+#rateadish()
 
 
 

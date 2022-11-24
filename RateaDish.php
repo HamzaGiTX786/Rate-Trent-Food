@@ -39,6 +39,10 @@
        {
            $errors['ratings'] = true;
        }
+       if($selectedDish == 0)
+       {
+         $errors['dish'] = true;
+       }
        
        // add the rating to the rating database
        if(count($errors) === 0)
@@ -129,10 +133,12 @@
             <div>
                <label for="dish">Please select a Dish</label>
                <select name="dish" id="dish">
+                  <option value="0">Select a dish</option>
                   <?php foreach($getdish as $dish):?>
                   <option value = <?=$dish[0];?>> <?php echo $dish[1]." - ".$dish[4]." - ".$dish[5]?> </option>
                   <?php endforeach ?>
                </select>
+               <span class="error <?=!isset($errors['dish']) ? 'hidden' : "";?>">Please select a rating.</span>
             </div>
            
             <div>

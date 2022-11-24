@@ -84,9 +84,10 @@
          <h2><?= $itemname;?> - <?= $cafe?> - <?= $build?></h2>
          <form id="review" name="review" method="post" novalidate>
             <div class="wrapper">
-               <div class="item1"></div>
+               <img src="img/LoveMeTenders.png" alt="Image of tenders">
+               <!--<div class="item1"></div>-->
                <!--<div id="rank" class="rating"><?= $rank;?> / 5</div> -->
-               <div class="item2">
+               <a href="RateaDish?item=$itemid" id="link"><div class="item2">
                   <p>Rating: <?= $rank;?> / 5</p>
                   <div class="rating">
                      <input type="radio" name="rating" value="5" id="5" disabled <?php if($rank == 5){echo 'checked';} ?>><label for="5">☆</label>
@@ -95,7 +96,7 @@
                      <input type="radio" name="rating" value="2" id="2" disabled <?php if($rank == 2){echo 'checked';} ?>><label for="2">☆</label>
                      <input type="radio" name="rating" value="1" id="1" disabled <?php if($rank == 1){echo 'checked';} ?>><label for="1">☆</label>
                   </div>
-               </div>
+               </div></a>
             </div>
        
             <div class="list-group">

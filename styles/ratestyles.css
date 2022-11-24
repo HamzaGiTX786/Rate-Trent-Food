@@ -12,13 +12,20 @@
   h2{
     justify-content: center;
   }
-  .item1 {
+
+  .wrapper img{
     grid-area: a;
-    background-color: gray;
+    padding-left: 5em;
   }
   .item2 {
     grid-area: b;
     justify-content: center;
+    
+  }
+
+  .item1 {
+    grid-area: a;
+    background-color: #333;
     
   }
   .rating {
@@ -56,5 +63,21 @@
   .rating:hover > input:checked ~ label:before{ 
   opacity: 0.4;
    }
+
+  a#link{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    text-shadow: 0.1em 0px 1px #333;
+    padding: 1em;
+  }
+
+  a:hover#link, a:visited#link{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    text-shadow: 0.1em 0px 1px #333;
+    padding: 1em;
+  }
   
 

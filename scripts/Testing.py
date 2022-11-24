@@ -60,7 +60,6 @@ def search():
         print("Test Failed")
 
 
-
 #create_account_test()  # test to check if the login page works
 #login_test()  # test to check if login page works
 #search()
